@@ -3,1325 +3,1082 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>خطة التحول الاستراتيجي | شركة غزال للرعاية والتأهيل</title>
-    <!-- Google Fonts: Cairo for premium Arabic typography -->
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    <!-- FontAwesome for modern icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Local CSS styling -->
+    <title>خطة التطوير الاستراتيجي | شركة ومصنع مذاق المتحدة للتجارة</title>
+    <meta name="description" content="لوحة قيادة تفاعلية تعرض خطة التطوير الاستراتيجي الشاملة لشركة ومصنع مذاق المتحدة للتجارة — 5 محاور استراتيجية، 5 قنوات بيع، ومؤشرات أداء دقيقة.">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="ASSETS/CSS/style.css">
-    <!-- Chart.js for data visualization -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-    <div class="app-container">
-        <!-- Sidebar Navigation -->
-        <aside class="sidebar">
-            <div class="sidebar-brand">
-                <div class="brand-icon">
-                    <i class="fa-solid fa-chart-line"></i>
-                </div>
-                <div class="brand-text">
-                    <h1>غزال للرعاية</h1>
-                    <span>خطة التحول الاستراتيجي</span>
+<div class="app-container">
+
+    <!-- =============== SIDEBAR =============== -->
+    <aside class="sidebar">
+        <div class="sidebar-brand">
+            <div class="brand-icon"><i class="fa-solid fa-utensils"></i></div>
+            <div class="brand-text">
+                <h1>مذاق المتحدة</h1>
+                <span>خطة التطوير الاستراتيجي</span>
+            </div>
+        </div>
+
+        <nav class="sidebar-menu">
+            <a href="#" class="menu-item active" data-target="overview">
+                <i class="fa-solid fa-house-chimney"></i>
+                <span>نظرة عامة والبراندات</span>
+            </a>
+            <a href="#" class="menu-item" data-target="axis1">
+                <i class="fa-solid fa-building-user"></i>
+                <span>المحور 1: التسجيل كمورد</span>
+                <span class="menu-badge">KPIs</span>
+            </a>
+            <a href="#" class="menu-item" data-target="channels">
+                <i class="fa-solid fa-sitemap"></i>
+                <span>المحور 2: قنوات البيع</span>
+                <span class="menu-badge">5</span>
+            </a>
+            <a href="#" class="menu-item" data-target="axis3">
+                <i class="fa-solid fa-certificate"></i>
+                <span>المحور 3: المحتوى المحلي</span>
+            </a>
+            <a href="#" class="menu-item" data-target="growth">
+                <i class="fa-solid fa-rocket"></i>
+                <span>المحور 4: التوسع والنمو</span>
+                <span class="menu-badge">3</span>
+            </a>
+            <a href="#" class="menu-item" data-target="kpis">
+                <i class="fa-solid fa-chart-pie"></i>
+                <span>مؤشرات الأداء والبيانات</span>
+            </a>
+            <a href="#" class="menu-item" data-target="consultant">
+                <i class="fa-solid fa-handshake"></i>
+                <span>المحور 5: الاتفاق والمستشار</span>
+            </a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <button id="theme-toggle" class="theme-btn">
+                <i class="fa-solid fa-moon"></i>
+                <span>الوضع الداكن</span>
+            </button>
+            <div class="copyright">
+                <p>© 2026 شركة مذاق المتحدة للتجارة</p>
+            </div>
+        </div>
+    </aside>
+
+    <!-- =============== MAIN CONTENT =============== -->
+    <main class="main-content">
+
+        <!-- Header -->
+        <header class="content-header">
+            <div class="header-title">
+                <h2 id="section-title">نظرة عامة — محفظة البراندات والملخص التنفيذي</h2>
+                <p id="section-desc">المطبخ المركزي الموحد يدير 6 علامات تجارية متكاملة بكفاءة إنتاجية قصوى</p>
+            </div>
+            <div class="header-meta">
+                <div class="current-date">
+                    <i class="fa-regular fa-calendar-days"></i>
+                    <span id="live-date">10 أغسطس 2026</span>
                 </div>
             </div>
-            
-            <nav class="sidebar-menu">
-                <a href="#" class="menu-item active" data-target="overview">
-                    <i class="fa-solid fa-house-chimney"></i>
-                    <span>نظرة عامة والجدول</span>
-                </a>
-                <a href="#" class="menu-item" data-target="market">
-                    <i class="fa-solid fa-scale-balanced"></i>
-                    <span>مقارنة السوق والتحول</span>
-                </a>
-                <a href="#" class="menu-item" data-target="diagnostics">
-                    <i class="fa-solid fa-clipboard-list"></i>
-                    <span>معايير التقييم والجاهزية</span>
-                </a>
-                <a href="#" class="menu-item" data-target="tracks">
-                    <i class="fa-solid fa-route"></i>
-                    <span>مسارات خطة التنفيذ</span>
-                </a>
-                <a href="#" class="menu-item" data-target="charts">
-                    <i class="fa-solid fa-chart-pie"></i>
-                    <span>مؤشرات الأداء والتحليلات</span>
-                </a>
-                <a href="#" class="menu-item" data-target="team">
-                    <i class="fa-solid fa-users-gear"></i>
-                    <span>فريق العمل والمسؤوليات</span>
-                </a>
-            </nav>
+        </header>
 
-            <div class="sidebar-footer">
-                <button id="theme-toggle" class="theme-btn">
-                    <i class="fa-solid fa-moon"></i>
-                    <span>الوضع الداكن</span>
-                </button>
-                <div class="copyright">
-                    <p>© 2026 شركة غزال للرعاية</p>
+        <!-- Metrics Row -->
+        <div class="metrics-grid">
+            <div class="metric-card">
+                <div class="card-icon primary"><i class="fa-solid fa-store"></i></div>
+                <div class="card-data">
+                    <h3>العلامات التجارية</h3>
+                    <p class="value">6 براندات</p>
+                    <span class="subtext">تحت مظلة مطبخ مركزي واحد</span>
                 </div>
             </div>
-        </aside>
-
-        <!-- Main Content Area -->
-        <main class="main-content">
-            <!-- Header -->
-            <header class="content-header">
-                <div class="header-title">
-                    <h2 id="section-title">لوحة التحكم العامة والملخص</h2>
-                    <p id="section-desc">متابعة أداء خطة التحول من شركة إلى شركة مساهمة والإدراج في السوق المالية</p>
-                </div>
-                <div class="header-meta">
-                    <div class="current-date">
-                        <i class="fa-regular fa-calendar-days"></i>
-                        <span id="live-date">13 يوليو 2026</span>
-                    </div>
-                </div>
-            </header>
-
-            <!-- Quick Metrics Cards -->
-            <div class="metrics-grid">
-                <div class="metric-card">
-                    <div class="card-icon info">
-                        <i class="fa-solid fa-bullseye"></i>
-                    </div>
-                    <div class="card-data">
-                        <h3>الهدف الاستراتيجي</h3>
-                        <p class="value">الإدراج (تداول)</p>
-                        <span class="subtext">المدى الزمني: 5 سنوات</span>
-                    </div>
-                </div>
-                <div class="metric-card">
-                    <div class="card-icon success">
-                        <i class="fa-solid fa-list-check"></i>
-                    </div>
-                    <div class="card-data">
-                        <h3>المستهدفات السنوية</h3>
-                        <p class="value" id="kpi-total-targets">100</p>
-                        <span class="subtext">إجمالي المهام الموزعة</span>
-                    </div>
-                </div>
-                <div class="metric-card">
-                    <div class="card-icon warning">
-                        <i class="fa-solid fa-business-time"></i>
-                    </div>
-                    <div class="card-data">
-                        <h3>خطة التشغيل والتنفيذ</h3>
-                        <p class="value">12 شهر</p>
-                        <span class="subtext">موزعة على 3 مراحل</span>
-                    </div>
-                </div>
-                <div class="metric-card">
-                    <div class="card-icon primary">
-                        <i class="fa-solid fa-users"></i>
-                    </div>
-                    <div class="card-data">
-                        <h3>فريق العمل المستهدف</h3>
-                        <p class="value">5 موظفين</p>
-                        <span class="subtext">يبدأ بـ 2 ويتوسع تدريجياً</span>
-                    </div>
+            <div class="metric-card">
+                <div class="card-icon info"><i class="fa-solid fa-sitemap"></i></div>
+                <div class="card-data">
+                    <h3>قنوات البيع</h3>
+                    <p class="value">5 قنوات</p>
+                    <span class="subtext">Retail · MT · Cash Van · Outlet · B2B</span>
                 </div>
             </div>
-
-            <!-- Page Sections -->
-            <div class="sections-container">
-                
-                <!-- 1. OVERVIEW & TIMELINE -->
-                <section id="section-overview" class="dashboard-section active-section">
-                    <div class="card summary-card">
-                        <div class="card-header">
-                            <i class="fa-solid fa-receipt icon-header"></i>
-                            <h3>الملخص التنفيذي لخطة التشغيل والتنفيذ</h3>
-                        </div>
-                        <div class="card-body text-justify">
-                            <p>تُقدم هذه المنصة خطة تنفيذ وتشغيل متكاملة لمدة سنة، مبنية على الاجتماع التأسيسي مع أصحاب مركز غزال للرعاية والتأهيل. تهدف الخطة إلى هيكلة الشركة وبناء إدارة تطوير الأعمال لتحقيق الأهداف الاستراتيجية المنهجية الممتدة عبر 5 مسارات رئيسية لتأهيل المركز للإدراج المالي.</p>
-                            <div class="summary-bullets">
-                                <div class="bullet-item">
-                                    <i class="fa-solid fa-check"></i>
-                                    <span><strong>تحديد نطاق العمل الصحي والتأهيلي:</strong> توفير خدمات الرعاية المتخصصة المنزلية والميدانية.</span>
-                                </div>
-                                <div class="bullet-item">
-                                    <i class="fa-solid fa-check"></i>
-                                    <span><strong>التسجيل كمورد معتمد:</strong> فتح قنوات رسمية مع وزارة الصحة، الصحة القابضة، والقطاعات العسكرية والأمنية.</span>
-                                </div>
-                                <div class="bullet-item">
-                                    <i class="fa-solid fa-check"></i>
-                                    <span><strong>منصة اعتماد والفرص:</strong> التقديم والدخول في مناقصات عقود الرعاية الإيوائية كمقاول رئيسي أو من الباطن.</span>
-                                </div>
-                                <div class="bullet-item">
-                                    <i class="fa-solid fa-check"></i>
-                                    <span><strong>التوسع الجغرافي:</strong> استهداف محافظات وقرى منطقتي الرياض والمدينة المنورة.</span>
-                                </div>
-                                <div class="bullet-item">
-                                    <i class="fa-solid fa-check"></i>
-                                    <span><strong>شراكات القطاع الثالث:</strong> بناء شبكة تعاقدات فنية مثمرة مع الجمعيات الخيرية وغير الربحية.</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="timeline-container-title">
-                        <i class="fa-solid fa-hourglass-half"></i>
-                        <h3>مراحل الخطة الزمنية (3 / 6 / 12 شهر)</h3>
-                    </div>
-
-                    <div class="phases-timeline">
-                        <!-- Phase 1 -->
-                        <div class="timeline-phase">
-                            <div class="phase-badge p-1">المرحلة الأولى</div>
-                            <div class="phase-time">أول 3 أشهر (التأسيس)</div>
-                            <div class="phase-card">
-                                <h4>جاهزية تنظيمية كاملة وتأسيس المسارات</h4>
-                                <ul>
-                                    <li><strong>نطاق العمل:</strong> إعداد نموذج العروض المخصصة لكل نطاق طبي بشكل منهجي وبناء نموذج العمل.</li>
-                                    <li><strong>التسجيل كمورد:</strong> حصر كامل للجهات الرسمية المستهدفة والبدء الفعلي للتسجيل مع الدفعة الأولى.</li>
-                                    <li><strong>اعتماد والفرص:</strong> صياغة آلية العمل والاختيار المناسبة للفرص والمناقصات طبقاً للشركاء.</li>
-                                    <li><strong>التوسع الجغرافي:</strong> تحديد المواقع الأنسب في الرياض والمدينة للبدء وصياغة خطة الاستهداف.</li>
-                                    <li><strong>الجهات غير الربحية:</strong> تحديد معايير وآليات اختيار الجمعيات المستهدفة.</li>
-                                </ul>
-                                <div class="phase-footer">
-                                    <span class="target-indicator"><i class="fa-solid fa-flag"></i> مستهدف نهاية الشهر 3: جاهزية كاملة وبدء التشغيل الفعلي.</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Phase 2 -->
-                        <div class="timeline-phase">
-                            <div class="phase-badge p-2">المرحلة الثانية</div>
-                            <div class="phase-time">الشهر 4 - 6 (الانطلاق)</div>
-                            <div class="phase-card">
-                                <h4>توقيع العقود الأولى والتمدد الميداني</h4>
-                                <ul>
-                                    <li><strong>نطاق العمل:</strong> تفعيل وتوزيع العروض الطبية والتأهيلية المعدة مع الشركاء الفعليين.</li>
-                                    <li><strong>التسجيل كمورد:</strong> إنهاء إجراءات الاعتماد الكاملة لدى المجموعة الأولى، وتقديم العروض التجارية.</li>
-                                    <li><strong>اعتماد والفرص:</strong> صياغة آليات التنسيق مع كبار الموردين وتجهيز أول عرض فني لمناقصة معتمدة.</li>
-                                    <li><strong>التوسع الجغرافي:</strong> إعداد خريطة دخول مفصلة لكل محافظة والبدء بتفعيل أول منطقتين.</li>
-                                    <li><strong>الجهات غير الربحية:</strong> بناء نموذج شراكة عادل وتوقيع اتفاقيات التعاون المشترك الأولى.</li>
-                                </ul>
-                                <div class="phase-footer">
-                                    <span class="target-indicator"><i class="fa-solid fa-file-contract"></i> مستهدف نهاية الشهر 6: توقيع أول العقود والمناقصات وتغطية جغرافية مبدئية.</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Phase 3 -->
-                        <div class="timeline-phase">
-                            <div class="phase-badge p-3">المرحلة الثالثة</div>
-                            <div class="phase-time">الشهر 7 - 12 (التوسع والتشغيل الكامل)</div>
-                            <div class="phase-card">
-                                <h4>توسيع التغطية ودمج الأنظمة والتقييم السنوي</h4>
-                                <ul>
-                                    <li><strong>نطاق العمل:</strong> توسيع النطاق الطبي والعلاجي وتعميم العروض على كافة التخصصات والخدمات.</li>
-                                    <li><strong>التسجيل كمورد:</strong> استكمال التسجيل والاعتماد في كافة المنصات والجهات المستهدفة بالكامل.</li>
-                                    <li><strong>اعتماد والفرص:</strong> تنفيذ خطة المشاركة والعمل المشترك مع الموردين الكبار في عقود الرعاية الإيوائية.</li>
-                                    <li><strong>التوسع الجغرافي:</strong> تفعيل العمل في كافة المواقع المستهدفة بمحافظات الرياض والمدينة المنورة.</li>
-                                    <li><strong>الجهات غير الربحية:</strong> تشغيل خطة المتابعة الدورية للجمعيات الخيرية مع تحقيق مستهدف شهري ثابت.</li>
-                                </ul>
-                                <div class="phase-footer">
-                                    <span class="target-indicator"><i class="fa-solid fa-arrows-spin"></i> مستهدف نهاية الشهر 12: تشغيل كامل بنسبة 100% عبر المسارات الخمسة وتقييم شامل.</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- 2. MARKET COMPARISON -->
-                <section id="section-market" class="dashboard-section">
-                    <div class="card text-justify">
-                        <div class="card-header">
-                            <i class="fa-solid fa-scale-balanced icon-header"></i>
-                            <h3>المقارنة بين السوق الرئيسية (تداول) والسوق الموازية (نمو)</h3>
-                        </div>
-                        <div class="card-body">
-                            <p class="section-intro">لتحديد الهدف الاستراتيجي بدقة، تمت دراسة شروط ومتطلبات السوقين لاختيار المسار المناسب للشركة في رحلة الطرح العام والتحول لشركة مساهمة:</p>
-                            
-                            <div class="table-responsive">
-                                <table class="comparison-table">
-                                    <thead>
-                                        <tr>
-                                            <th>معيار المقارنة</th>
-                                            <th class="tadawul-col">السوق الرئيسية (تداول)</th>
-                                            <th class="nomu-col">السوق الموازية (نمو)</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td class="table-criterion">الحد الأدنى للقيمة السوقية</td>
-                                            <td class="highlight-tadawul">300 مليون ريال سعودي</td>
-                                            <td class="highlight-nomu">10 ملايين ريال سعودي</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="table-criterion">تاريخ النشاط التشغيلي</td>
-                                            <td>3 سنوات مالية (على الأقل)</td>
-                                            <td>سنة مالية واحدة (على الأقل)</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="table-criterion">القوائم المالية المدققة</td>
-                                            <td>مطلوبة لآخر 3 سنوات</td>
-                                            <td>مطلوبة لآخر سنة مالية</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="table-criterion">الأسهم الحرة (الحد الأدنى للطرح)</td>
-                                            <td>30% من إجمالي أسهم الشركة</td>
-                                            <td>20%، أو قيمة سوقية للأسهم لا تقل عن 30 مليون ريال</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="table-criterion">الحد الأدنى لعدد المساهمين</td>
-                                            <td>200 مساهم عند الإدراج</td>
-                                            <td>50 مساهماً (من المستثمرين المؤهلين)</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="table-criterion">نوعية المستثمرين المسموح لهم</td>
-                                            <td>جميع الفئات (أفراد وصناديق ومؤسسات)</td>
-                                            <td>المستثمرون المؤهلون فقط (أفراد/جهات بشروط)</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="table-criterion">نطاق التذبذب السعري اليومي</td>
-                                            <td>± 10%</td>
-                                            <td>± 30%</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="table-criterion">متطلبات الحوكمة</td>
-                                            <td>إلزامية وشاملة (حسب لائحة حوكمة الشركات)</td>
-                                            <td>استرشادية، مع إلزامية بعض المواد فقط</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="table-criterion">الإفصاح المالي دورياً</td>
-                                            <td>إعلان القوائم المالية كل ربع سنة (ربع سنوي)</td>
-                                            <td>إعلان القوائم المالية كل نصف سنة (نصف سنوي)</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="table-criterion">تغيير الأنشطة الأساسية</td>
-                                            <td colspan="2" class="text-center text-muted font-weight-bold">غير مسموح بتغيير النشاط الأساسي قبل الإدراج</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="table-criterion">الحظر على أسهم المؤسسين</td>
-                                            <td>فترة حظر تبلغ 6 أشهر من تاريخ بدء التداول</td>
-                                            <td>فترة حظر تبلغ 12 شهراً من تاريخ بدء التداول</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="grid-2col">
-                        <!-- Transition Rules -->
-                        <div class="card">
-                            <div class="card-header">
-                                <i class="fa-solid fa-right-from-bracket icon-header"></i>
-                                <h3>شروط وآلية الانتقال من "نمو" إلى "تداول"</h3>
-                            </div>
-                            <div class="card-body text-justify">
-                                <p class="card-intro-desc">يُعتبر سوق "نمو" محطة انتقالية تمكن الشركات من التهيئة والتوسع. شروط الترقية للسوق الرئيسي تشمل:</p>
-                                <ul class="features-list">
-                                    <li>
-                                        <div class="feature-icon"><i class="fa-solid fa-clock"></i></div>
-                                        <div><strong>المدة الزمنية:</strong> قضاء مدة لا تقل عن سنتين (24 شهراً) مدرجة في سوق "نمو".</div>
-                                    </li>
-                                    <li>
-                                        <div class="feature-icon"><i class="fa-solid fa-money-bill-trend-up"></i></div>
-                                        <div><strong>القيمة السوقية:</strong> تحقيق قيمة سوقية لا تقل عن 300 مليون ريال كحد أدنى.</div>
-                                    </li>
-                                    <li>
-                                        <div class="feature-icon"><i class="fa-solid fa-percent"></i></div>
-                                        <div><strong>الأسهم الحرة:</strong> تحقيق متطلبات سيولة سوق تداول (الأسهم الحرة لا تقل عن 30%).</div>
-                                    </li>
-                                    <li>
-                                        <div class="feature-icon"><i class="fa-solid fa-users-line"></i></div>
-                                        <div><strong>قرار مجلس الإدارة:</strong> يتطلب الانتقال قراراً من مجلس إدارة الشركة مباشرة دون إلزامية الجمعية العامة.</div>
-                                    </li>
-                                    <li>
-                                        <div class="feature-icon"><i class="fa-solid fa-file-invoice"></i></div>
-                                        <div><strong>مستند الانتقال:</strong> نشر مستند مبسط يوضح التغيرات الجوهرية دون الحاجة لنشرة إصدار معقدة.</div>
-                                    </li>
-                                    <li>
-                                        <div class="feature-icon"><i class="fa-solid fa-shield-halved"></i></div>
-                                        <div><strong>الامتثال المالي:</strong> خلو السجل من المخالفات والقضايا التنظيمية العالقة مع هيئة السوق المالية.</div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <!-- Qualified Investors -->
-                        <div class="card">
-                            <div class="card-header">
-                                <i class="fa-solid fa-user-shield icon-header"></i>
-                                <h3>تصنيف "المستثمر المؤهل" في سوق نمو</h3>
-                            </div>
-                            <div class="card-body text-justify">
-                                <p class="card-intro-desc">نظراً لنسبة التذبذب العالية (30%)، يقتصر التداول في نمو على المستثمرين المؤهلين، وينقسمون إلى:</p>
-                                
-                                <div class="tabs-container">
-                                    <div class="tabs-buttons">
-                                        <button class="tab-btn active" data-tab="investor-corp">الكيانات والمؤسسات</button>
-                                        <button class="tab-btn" data-tab="investor-indiv">الأفراد</button>
-                                    </div>
-                                    <div class="tabs-content active-content" id="investor-corp">
-                                        <ul class="normal-list">
-                                            <li><i class="fa-solid fa-circle-dot"></i> مؤسسات السوق المالية المرخص لها من قبل هيئة السوق المالية.</li>
-                                            <li><i class="fa-solid fa-circle-dot"></i> الجهات الحكومية والصناديق الاستثمارية السيادية والمحلية.</li>
-                                            <li><i class="fa-solid fa-circle-dot"></i> الشركات الخليجية والشركات المساهمة أو ذات المسؤولية المحدودة.</li>
-                                            <li><i class="fa-solid fa-circle-dot"></i> عملاء مؤسسات سوق مالية مرخص لها بتقديم خدمات الإدارة بشروط معينة.</li>
-                                        </ul>
-                                    </div>
-                                    <div class="tabs-content" id="investor-indiv">
-                                        <p class="notice-text">يجب على الفرد تلبية <strong>شرط واحد على الأقل</strong> من الشروط التالية للتداول:</p>
-                                        <ul class="normal-list">
-                                            <li><i class="fa-solid fa-circle-chevron-left"></i> <strong>حجم التداول:</strong> صفقات لا يقل إجمالي قيمتها عن 40 مليون ريال، وبمعدل لا يقل عن 10 صفقات في كل ربع سنة خلال الـ 12 شهراً الماضية.</li>
-                                            <li><i class="fa-solid fa-circle-chevron-left"></i> <strong>حجم الأصول:</strong> متوسط حجم محفظة الأوراق المالية لا يقل عن 10 ملايين ريال خلال الـ 12 شهراً الماضية.</li>
-                                            <li><i class="fa-solid fa-circle-chevron-left"></i> <strong>الشهادات المهنية:</strong> الحصول على الشهادة العامة للتعامل في الأوراق المالية (CME-1) المعتمدة.</li>
-                                            <li><i class="fa-solid fa-circle-chevron-left"></i> <strong>الخبرة العملية:</strong> العمل لمدة 3 سنوات على الأقل في القطاع المالي بوظيفة تتعلق بالاستثمار.</li>
-                                            <li><i class="fa-solid fa-circle-chevron-left"></i> <strong>صافي الأصول:</strong> أن لا يقل صافي أصول الفرد عن 50 مليون ريال سعودي.</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- 3. DIAGNOSTICS & AXES -->
-                <section id="section-diagnostics" class="dashboard-section">
-                    <div class="card text-justify">
-                        <div class="card-header">
-                            <i class="fa-solid fa-list-check icon-header"></i>
-                            <h3>معايير التقييم والجاهزية المؤسسية للشركة</h3>
-                        </div>
-                        <div class="card-body">
-                            <p class="section-intro">تتطلب عملية التحول تقييماً تشخيصياً شاملاً للشركة عبر 4 محاور رئيسية، لمطابقة شروط الإدراج وبناء هيكل تنظيمي متطور. تفاعل مع القوائم أدناه لتتبع نسب الجاهزية الافتراضية:</p>
-                            
-                            <!-- Interactive Checklist Progress -->
-                            <div class="progress-tracker-bar">
-                                <div class="progress-title">
-                                    <span>معدل الجاهزية الكلي للمحاور الأربعة</span>
-                                    <span id="overall-progress-percentage">0%</span>
-                                </div>
-                                <div class="progress-rail">
-                                    <div class="progress-fill" id="overall-progress-fill" style="width: 0%;"></div>
-                                </div>
-                            </div>
-
-                            <div class="diagnostics-accordion">
-                                
-                                <!-- Axis 1: Financial -->
-                                <div class="accordion-item">
-                                    <div class="accordion-header">
-                                        <div class="header-main">
-                                            <i class="fa-solid fa-money-bill-transfer"></i>
-                                            <h4>1. محور التقييم المالي والنموذج التجاري (Financial & Commercial)</h4>
-                                        </div>
-                                        <div class="header-status">
-                                            <span class="badge badge-axis-progress" id="axis1-progress">0%</span>
-                                            <i class="fa-solid fa-chevron-down toggle-icon"></i>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-content">
-                                        <div class="accordion-inner">
-                                            <p class="axis-description">يتعلق بالتحقق المالي، جودة الأرباح، وطرق التقييم المستخدمة لجذب المستثمرين.</p>
-                                            
-                                            <div class="axis-table-view">
-                                                <table class="axis-details-table">
-                                                    <thead>
-                                                        <tr>
-                                                            <th>المعيار</th>
-                                                            <th>متطلب التداول (الرئيسي)</th>
-                                                            <th>متطلب نمو (الموازي)</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td><strong>منهجية التقييم (Valuation)</strong></td>
-                                                            <td>تقييم صارم يعتمد على التدفقات النقدية المخصومة (DCF) ومكررات الربحية للشركات المماثلة.</td>
-                                                            <td>مرونة أعلى يركز على علاوة النمو (Growth Premium) والتوقعات المستقبلية.</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td><strong>جودة الأرباح (QoE)</strong></td>
-                                                            <td>يشترط تنوع مصادر الدخل، عدم التركز في العملاء، وهوامش ربحية مستقرة ومثبتة لثلاث سنوات.</td>
-                                                            <td>تُقبل الشركات ذات التركز العالي شريطة وجود خطة واضحة ومثبتة لتقليل التركز مستقبلاً.</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td><strong>رأس المال العامل</strong></td>
-                                                            <td>كفاءة عالية ومثبتة في إدارة النقد، وتحصيل الذمم، وهيكل رأس مال قوي ومستقل.</td>
-                                                            <td>سياسات أولية لإدارة النقد مع قابلية ضخ استثمارات لتمويل رأس المال العامل بعد الطرح.</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-
-                                            <div class="checklist-interactive">
-                                                <h5>قائمة التحقق التفاعلية (اختر البنود المنجزة):</h5>
-                                                <div class="checkbox-group">
-                                                    <label class="check-container">
-                                                        <input type="checkbox" class="progress-checkbox" data-axis="axis1">
-                                                        <span class="checkmark"></span>
-                                                        <span>تطبيق معايير التدفقات النقدية المخصومة (DCF) في التقييم المالي للشركة.</span>
-                                                    </label>
-                                                    <label class="check-container">
-                                                        <input type="checkbox" class="progress-checkbox" data-axis="axis1">
-                                                        <span class="checkmark"></span>
-                                                        <span>تنويع مصادر الإيرادات الطبية وتقليل مخاطر تركز العملاء/الموردين.</span>
-                                                    </label>
-                                                    <label class="check-container">
-                                                        <input type="checkbox" class="progress-checkbox" data-axis="axis1">
-                                                        <span class="checkmark"></span>
-                                                        <span>تأسيس سياسة معتمدة لإدارة رأس المال العامل وتحصيل الذمم المدينة والآجلة.</span>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Axis 2: Governance -->
-                                <div class="accordion-item">
-                                    <div class="accordion-header">
-                                        <div class="header-main">
-                                            <i class="fa-solid fa-building-shield"></i>
-                                            <h4>2. محور الحوكمة، المخاطر والامتثال (GRC & Board Structure)</h4>
-                                        </div>
-                                        <div class="header-status">
-                                            <span class="badge badge-axis-progress" id="axis2-progress">0%</span>
-                                            <i class="fa-solid fa-chevron-down toggle-icon"></i>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-content">
-                                        <div class="accordion-inner">
-                                            <p class="axis-description">تأسيس لجان مجلس الإدارة، الإدارة والرقابة الداخلية، والفصل المؤسسي بين الملاك والإدارة التنفيذية.</p>
-                                            
-                                            <div class="axis-table-view">
-                                                <table class="axis-details-table">
-                                                    <thead>
-                                                        <tr>
-                                                            <th>المعيار</th>
-                                                            <th>متطلب التداول (الرئيسي)</th>
-                                                            <th>متطلب نمو (الموازي)</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td><strong>لجان مجلس الإدارة</strong></td>
-                                                            <td>إلزامية اللجان المتخصصة (المراجعة، الترشيحات والمكافآت، المخاطر) واستقلالية الأعضاء الكاملة.</td>
-                                                            <td>الاكتفاء بالحد الأدنى القانوني (لجنة المراجعة) والباقي استرشادي للتهيئة المستقرة.</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td><strong>إدارة المخاطر والرقابة</strong></td>
-                                                            <td>وجود إدارة مراجعة داخلية مستقلة، وتطبيق أطر عالمية (COSO, ISO 31000) للمخاطر المؤسسية.</td>
-                                                            <td>التركيز على المخاطر التشغيلية وتعيين مراجع داخلي أو إسناده لمصادر خارجية.</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td><strong>الفصل بين الملكية والإدارة</strong></td>
-                                                            <td>فصل تام ومؤسسي بين المؤسسين والإدارة التنفيذية لحماية حقوق مساهمي الأقلية.</td>
-                                                            <td>يُسمح بتداخل أكبر (المالك هو المدير)، لكن يجب وضع سياسات للحد من تعارض المصالح.</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-
-                                            <div class="checklist-interactive">
-                                                <h5>قائمة التحقق التفاعلية (اختر البنود المنجزة):</h5>
-                                                <div class="checkbox-group">
-                                                    <label class="check-container">
-                                                        <input type="checkbox" class="progress-checkbox" data-axis="axis2">
-                                                        <span class="checkmark"></span>
-                                                        <span>تأسيس لجنة المراجعة القانونية المستقلة لمجلس الإدارة.</span>
-                                                    </label>
-                                                    <label class="check-container">
-                                                        <input type="checkbox" class="progress-checkbox" data-axis="axis2">
-                                                        <span class="checkmark"></span>
-                                                        <span>صياغة هيكل حوكمة يمنع تعارض المصالح والتعاملات مع الأطراف ذات العلاقة.</span>
-                                                    </label>
-                                                    <label class="check-container">
-                                                        <input type="checkbox" class="progress-checkbox" data-axis="axis2">
-                                                        <span class="checkmark"></span>
-                                                        <span>تفعيل برنامج إدارة المخاطر وتعيين جهة خارجية/داخلية للتدقيق والرقابة.</span>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Axis 3: Human Capital -->
-                                <div class="accordion-item">
-                                    <div class="accordion-header">
-                                        <div class="header-main">
-                                            <i class="fa-solid fa-users-gear"></i>
-                                            <h4>3. محور رأس المال البشري والإدارة التنفيذية (Human Capital & Executive)</h4>
-                                        </div>
-                                        <div class="header-status">
-                                            <span class="badge badge-axis-progress" id="axis3-progress">0%</span>
-                                            <i class="fa-solid fa-chevron-down toggle-icon"></i>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-content">
-                                        <div class="accordion-inner">
-                                            <p class="axis-description">تأسيس الهيكل القيادي C-Suite، وتحديد مصفوفة الصلاحيات، وإدارة مخاطر الشخص الرئيسي.</p>
-                                            
-                                            <div class="axis-table-view">
-                                                <table class="axis-details-table">
-                                                    <thead>
-                                                        <tr>
-                                                            <th>المعيار</th>
-                                                            <th>متطلب التداول (الرئيسي)</th>
-                                                            <th>متطلب نمو (الموازي)</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td><strong>الفريق التنفيذي (C-Suite)</strong></td>
-                                                            <td>فريق متكامل (CEO, CFO, COO) ذو خبرة في الشركات المساهمة ومتطلبات السوق المالية.</td>
-                                                            <td>فريق فني/تجاري كفء مع وجود مدير مالي (CFO) محترف بالقوائم الدولية (IFRS).</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td><strong>هيكلة الإدارات والصلاحيات</strong></td>
-                                                            <td>هيكل تنظيمي موثق، مصفوفة صلاحيات (DoA) معتمدة، وأوصاف وظيفية دقيقة لكل إدارة.</td>
-                                                            <td>هيكل تنظيمي مرن ومناسب للتشغيل والمالية الأساسية.</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td><strong>خطط التعاقب الوظيفي</strong></td>
-                                                            <td>وجود خطط مكتوبة ومفعلة لتعاقب القيادات لضمان استمرارية الأعمال.</td>
-                                                            <td>غير ملزمة، ولكن يقيم المستشار المالي مخاطر الاعتماد على المؤسس (Key-Man Risk).</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-
-                                            <div class="checklist-interactive">
-                                                <h5>قائمة التحقق التفاعلية (اختر البنود المنجزة):</h5>
-                                                <div class="checkbox-group">
-                                                    <label class="check-container">
-                                                        <input type="checkbox" class="progress-checkbox" data-axis="axis3">
-                                                        <span class="checkmark"></span>
-                                                        <span>تعيين رئيس تنفيذي ومدير مالي (CFO) متمكن من المعايير الدولية (IFRS).</span>
-                                                    </label>
-                                                    <label class="check-container">
-                                                        <input type="checkbox" class="progress-checkbox" data-axis="axis3">
-                                                        <span class="checkmark"></span>
-                                                        <span>اعتماد وتوثيق مصفوفة الصلاحيات الإدارية والمالية للمنشأة (DoA).</span>
-                                                    </label>
-                                                    <label class="check-container">
-                                                        <input type="checkbox" class="progress-checkbox" data-axis="axis3">
-                                                        <span class="checkmark"></span>
-                                                        <span>إعداد خطط تعاقب وظيفي مكتوبة وموثقة للحد من مخاطر الشخص الرئيسي.</span>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Axis 4: Operational Readiness -->
-                                <div class="accordion-item">
-                                    <div class="accordion-header">
-                                        <div class="header-main">
-                                            <i class="fa-solid fa-circle-nodes"></i>
-                                            <h4>4. الجاهزية التشغيلية والبنية المؤسسية (Operational Readiness & PMO)</h4>
-                                        </div>
-                                        <div class="header-status">
-                                            <span class="badge badge-axis-progress" id="axis4-progress">0%</span>
-                                            <i class="fa-solid fa-chevron-down toggle-icon"></i>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-content">
-                                        <div class="accordion-inner">
-                                            <p class="axis-description">تأسيس مكتب إدارة المشاريع، حوكمة الأنظمة التقنية (ERP)، وتوثيق أدلة العمل الإجرائية.</p>
-                                            
-                                            <div class="axis-table-view">
-                                                <table class="axis-details-table">
-                                                    <thead>
-                                                        <tr>
-                                                            <th>المعيار</th>
-                                                            <th>متطلب التداول (الرئيسي)</th>
-                                                            <th>متطلب نمو (الموازي)</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td><strong>إدارة المشاريع (PMO)</strong></td>
-                                                            <td>مكتب إدارة مشاريع (PMO) ناضج لحوكمة التوسع والإنفاق الرأسمالي (CAPEX).</td>
-                                                            <td>خطة عمل استراتيجية (Business Plan) مع آليات لمتابعة المشاريع وقياس العوائد.</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td><strong>الأنظمة التقنية (ERP)</strong></td>
-                                                            <td>تطبيق نظام ERP متقدم، ونظام متطور لإدارة المعرفة لمنع مركزية المعلومات.</td>
-                                                            <td>أنظمة محاسبية كافية وموثوقة لتدقيق الحسابات ربع/نصف السنوية.</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td><strong>الأدلة الإجرائية (SOPs)</strong></td>
-                                                            <td>كافة العمليات موثقة ومعتمدة ومؤتمتة لضمان توحيد المعايير وتقليل الأخطاء.</td>
-                                                            <td>توثيق العمليات الأساسية التي تمس جودة الخدمة (خصوصاً القطاع الطبي) والرقابة المالية.</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-
-                                            <div class="checklist-interactive">
-                                                <h5>قائمة التحقق التفاعلية (اختر البنود المنجزة):</h5>
-                                                <div class="checkbox-group">
-                                                    <label class="check-container">
-                                                        <input type="checkbox" class="progress-checkbox" data-axis="axis4">
-                                                        <span class="checkmark"></span>
-                                                        <span>صياغة خطة عمل استراتيجية ونموذج عمل قابل للتطبيق والتتبع.</span>
-                                                    </label>
-                                                    <label class="check-container">
-                                                        <input type="checkbox" class="progress-checkbox" data-axis="axis4">
-                                                        <span class="checkmark"></span>
-                                                        <span>تشغيل نظام محاسبي وتقني موثق وقادر على إصدار تقارير مالية نصف سنوية.</span>
-                                                    </label>
-                                                    <label class="check-container">
-                                                        <input type="checkbox" class="progress-checkbox" data-axis="axis4">
-                                                        <span class="checkmark"></span>
-                                                        <span>توثيق دليل الإجراءات التشغيلية والسريرية المعتمدة لتقديم الخدمات الطبية (SOPs).</span>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                            <div class="diagnostics-summary-card">
-                                <h5>الخلاصة الاستراتيجية للتحول:</h5>
-                                <p><strong>إذا كان الهدف هو السوق الرئيسية (تداول):</strong> يجب التركيز الفوري على الهندسة المؤسسية المتكاملة، وتأسيس مكاتب إدارة المشاريع والمخاطر، وأتمتة العمليات بالكامل.</p>
-                                <p><strong>أما إذا كان الهدف هو السوق الموازية (نمو):</strong> فينصب التركيز على الهيكلة المالية والتشغيلية الأساسية، وتعيين فريق مالي كفء لتحضير القوائم المالية الدولية وبناء قصة نمو مقنعة للمستثمرين المؤهلين.</p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- 4. EXECUTION TRACKS -->
-                <section id="section-tracks" class="dashboard-section">
-                    <!-- Top selector tabs for 5 Tracks -->
-                    <div class="tracks-nav">
-                        <button class="track-tab-btn active" data-track="track-1">
-                            <i class="fa-solid fa-stethoscope"></i>
-                            <span>1. نطاق العمل</span>
-                        </button>
-                        <button class="track-tab-btn" data-track="track-2">
-                            <i class="fa-solid fa-file-signature"></i>
-                            <span>2. تسجيل مورد</span>
-                        </button>
-                        <button class="track-tab-btn" data-track="track-3">
-                            <i class="fa-solid fa-server"></i>
-                            <span>3. اعتماد ومناقصات</span>
-                        </button>
-                        <button class="track-tab-btn" data-track="track-4">
-                            <i class="fa-solid fa-map-location-dot"></i>
-                            <span>4. التوسع الجغرافي</span>
-                        </button>
-                        <button class="track-tab-btn" data-track="track-5">
-                            <i class="fa-solid fa-handshake-angle"></i>
-                            <span>5. القطاع الثالث</span>
-                        </button>
-                    </div>
-
-                    <!-- Track 1 Content: Scope of Work -->
-                    <div class="track-content active-track" id="track-1">
-                        <div class="card text-justify">
-                            <div class="card-header">
-                                <i class="fa-solid fa-circle-check icon-header"></i>
-                                <h3>العنصر الأول: تحديد وتفصيل نطاق العمل الطبي والتأهيلي</h3>
-                            </div>
-                            <div class="card-body">
-                                <p class="card-intro-desc">يغطي نطاق عمل شركة غزال التخصصات الصحية والتأهيلية التي يتم تسويقها وتقديمها للجهات الحكومية والخيرية:</p>
-                                
-                                <div class="scope-services-grid">
-                                    <div class="service-box">
-                                        <i class="fa-solid fa-person-walking-with-cane"></i>
-                                        <h5>العلاج الطبيعي والتأهيل</h5>
-                                        <p>برامج مكثفة لاستعادة الحركة وتحسين القوة البدنية.</p>
-                                    </div>
-                                    <div class="service-box">
-                                        <i class="fa-solid fa-brain"></i>
-                                        <h5>العلاج السلوكي والنفسي</h5>
-                                        <p>تعديل السلوك وجلسات التأهيل النفسي والتخاطب.</p>
-                                    </div>
-                                    <div class="service-box">
-                                        <i class="fa-solid fa-wheelchair"></i>
-                                        <h5>التأهيل الشامل</h5>
-                                        <p>خدمات الدعم الطبي المتقدم للرعاية اليومية والمستمرة.</p>
-                                    </div>
-                                    <div class="service-box">
-                                        <i class="fa-solid fa-person-cane"></i>
-                                        <h5>رعاية كبار السن</h5>
-                                        <p>رعاية صحية وتأهيلية متخصصة ومصممة للمسنين.</p>
-                                    </div>
-                                    <div class="service-box">
-                                        <i class="fa-solid fa-child-reaching"></i>
-                                        <h5>ذوي الاحتياجات الخاصة</h5>
-                                        <p>رعاية وتعليم وتأهيل فني للأطفال المصابين بإعاقات.</p>
-                                    </div>
-                                    <div class="service-box">
-                                        <i class="fa-solid fa-shield-virus"></i>
-                                        <h5>علاج الشلل والأعصاب</h5>
-                                        <p>علاج حالات الشلل الدماغي (اللويجي)، الرعاش، وأعصاب الأطفال.</p>
-                                    </div>
-                                    <div class="service-box">
-                                        <i class="fa-solid fa-house-medical"></i>
-                                        <h5>الرعاية المنزلية المتنقلة</h5>
-                                        <p>تقديم الرعاية الطبية الفورية والتأهيل في منزل المستفيد مباشرة.</p>
-                                    </div>
-                                    <div class="service-box">
-                                        <i class="fa-solid fa-truck-medical"></i>
-                                        <h5>العيادات المتنقلة</h5>
-                                        <p>تسيير عيادات مجهزة للمناطق النائية ومراكز الأطراف.</p>
-                                    </div>
-                                </div>
-
-                                <div class="additional-specialties">
-                                    <h5>تخصصات إضافية معتمدة:</h5>
-                                    <span class="badge specialty-badge">الرعاية اللاحقة لعمليات السمنة</span>
-                                    <span class="badge specialty-badge">الأمراض الروماتزمية</span>
-                                    <span class="badge specialty-badge">الصرع</span>
-                                    <span class="badge specialty-badge">زراعة العين</span>
-                                    <span class="badge specialty-badge">زراعة الكلى</span>
-                                    <span class="badge specialty-badge">إصابات العمود الفقري</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Track 2 Content: Vendor Registration -->
-                    <div class="track-content" id="track-2">
-                        <div class="card text-justify">
-                            <div class="card-header">
-                                <i class="fa-solid fa-id-card-clip icon-header"></i>
-                                <h3>العنصر الثاني: التسجيل كمورد معتمد لدى الجهات الرسمية</h3>
-                            </div>
-                            <div class="card-body">
-                                <p class="card-intro-desc">لتأمين الدخول في المناقصات الرسمية، يتم تسجيل وترخيص الشركة كمورد معتمد ومصنف لدى الجهات التالية بشكل مستقل:</p>
-                                
-                                <div class="vendors-steps-container">
-                                    <div class="vendor-step-card">
-                                        <div class="step-num">01</div>
-                                        <div class="step-title">وزارة الصحة والصحة القابضة</div>
-                                        <p class="step-desc">الحصول على التراخيص الصحية والاعتمادات اللازمة والتصنيف كمنشأة تقديم خدمات صحية منزلية معتمدة.</p>
-                                    </div>
-                                    <div class="vendor-step-card">
-                                        <div class="step-num">02</div>
-                                        <div class="step-title">مركز التأهيل الشامل</div>
-                                        <p class="step-desc">تقديم الملف الفني والتأهيلي للمركز للموافقة على تحويل الحالات والتعاقد المباشر لرعاية النزلاء.</p>
-                                    </div>
-                                    <div class="vendor-step-card">
-                                        <div class="step-num">03</div>
-                                        <div class="step-title">وزارة الدفاع والجيش السعودي</div>
-                                        <p class="step-desc">التسجيل في البوابات العسكرية لقسم المشتريات والخدمات الطبية لحرس الحدود وكتائب المجاهدين.</p>
-                                    </div>
-                                    <div class="vendor-step-card">
-                                        <div class="step-num">04</div>
-                                        <div class="step-title">وزارة الداخلية وأمن الدولة</div>
-                                        <p class="step-desc">إنهاء متطلبات التسجيل الأمني وتصنيف الموردين للخدمات الطبية لقوات الأمن الداخلي وإمداد العناية.</p>
-                                    </div>
-                                </div>
-
-                                <div class="alert-info-box">
-                                    <i class="fa-solid fa-circle-exclamation"></i>
-                                    <p><strong>تنبيه هام:</strong> لكل جهة من هذه الجهات اشتراطات ونماذج تسجيل خاصة بها، وتتضمن زيارات ميدانية للتحقق من جودة الكادر الطبي والأدلة الإجرائية المعمول بها في شركة غزال.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Track 3 Content: Etimad & Opportunities -->
-                    <div class="track-content" id="track-3">
-                        <div class="card text-justify">
-                            <div class="card-header">
-                                <i class="fa-solid fa-file-invoice-dollar icon-header"></i>
-                                <h3>العنصر الثالث: رصد المنافسات والعمل عبر منصات الفرص (اعتماد)</h3>
-                            </div>
-                            <div class="card-body">
-                                <p class="card-intro-desc">يتم رصد ودراسة الفرص الصحية والتأهيلية عبر منصات: (اعتماد، فرص، فرصة، تنافس، وتكامل)، ويتم العمل وفق ثلاث مراحل تنظيمية:</p>
-
-                                <div class="steps-etimad">
-                                    <div class="etimad-step">
-                                        <h5>1. تلبية المتطلبات النظامية الأساسية للتسجيل</h5>
-                                        <p>تأمين أوراق الشركة: السجل التجاري، الغرفة التجارية، شهادة منشآت (SMEs)، الزكاة والدخل، التأمينات الاجتماعية، العنوان الوطني، الحساب البنكي، والقوائم المدققة.</p>
-                                    </div>
-                                    <div class="etimad-step">
-                                        <h5>2. استيفاء متطلبات التأهيل المسبق واللاحق</h5>
-                                        <p>بناء ملف القدرة الفنية للتأهيل قبل التقديم على المنافسات (Pre-qualification) ولحظة ترسية العقد والتدقيق اللاحق (Post-qualification).</p>
-                                    </div>
-                                    <div class="etimad-step">
-                                        <h5>3. دراسة وتحديد مواصفات المناقصات المناسبة</h5>
-                                        <p>تحليل كراسات الشروط والقدرات المطلوبة للتحقق من القدرة الفعلية على التشغيل والتسليم للفرص المرصودة.</p>
-                                    </div>
-                                </div>
-
-                                <h4 class="sub-section-title">دراسة حالة المنافسات: مشروع عقد العناية الشخصية بالدور الاجتماعية ومراكز التأهيل الشامل</h4>
-                                <p>يحتوي هذا المشروع على خدمات متكاملة إيوانية وصحية مقسمة على 6 مجالات (العناية وحاضنات الأطفال، الخدمات المساندة، التمريض، العلاج والتدريب والتأهيل، طب الأسنان والصيدلة، والتغذية).</p>
-                                
-                                <div class="table-responsive">
-                                    <table class="data-table">
-                                        <thead>
-                                            <tr>
-                                                <th>م</th>
-                                                <th>اسم العقد المرصود</th>
-                                                <th>تاريخ الطرح</th>
-                                                <th>المورد الرئيسي الفائز</th>
-                                                <th>قيمة العقد الإجمالية</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>1</td>
-                                                <td>مشروع عقد العناية الشخصية - المجموعة السادسة</td>
-                                                <td>2024-01-29</td>
-                                                <td>شركة أفراس للتجارة والمقاولات</td>
-                                                <td class="money-text">260,429,269.05 ريال</td>
-                                            </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td>مشروع عقد العناية الشخصية - المجموعة الثالثة</td>
-                                                <td>2024-01-23</td>
-                                                <td>شركة زهران للصيانة والتشغيل</td>
-                                                <td class="money-text">316,521,151.40 ريال</td>
-                                            </tr>
-                                            <tr>
-                                                <td>3</td>
-                                                <td>مشروع عقد العناية الشخصية - المجموعة الخامسة</td>
-                                                <td>2024-01-10</td>
-                                                <td>شركة مجموعة النصبان</td>
-                                                <td class="money-text">134,988,933.56 ريال</td>
-                                            </tr>
-                                            <tr>
-                                                <td>4</td>
-                                                <td>مشروع عقد العناية الشخصية - المجموعة السابعة</td>
-                                                <td>2024-01-10</td>
-                                                <td>شركة أفراس للتجارة والمقاولات</td>
-                                                <td class="money-text">133,588,181.01 ريال</td>
-                                            </tr>
-                                            <tr>
-                                                <td>5</td>
-                                                <td>مشروع عقد العناية الشخصية - المجموعة الأولى</td>
-                                                <td>2023-11-14</td>
-                                                <td>شركة زهران للصيانة والتشغيل</td>
-                                                <td class="money-text">470,661,561.00 ريال</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-
-                                <div class="recommendation-badge">
-                                    <i class="fa-solid fa-lightbulb"></i>
-                                    <p><strong>التوصية الاستراتيجية:</strong> التواصل المباشر مع هؤلاء الموردين الفائزين لبناء شراكات عمل وعقود من الباطن (Sub-contracting) لتنفيذ المجالات الطبية والتأهيلية المشمولة في مشاريعهم الكبرى.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Track 4 Content: Geographic Expansion -->
-                    <div class="track-content" id="track-4">
-                        <div class="card text-justify">
-                            <div class="card-header">
-                                <i class="fa-solid fa-map-location-dot icon-header"></i>
-                                <h3>العنصر الرابع: خريطة الأماكن والمحافظات المستهدفة للتوسع</h3>
-                            </div>
-                            <div class="card-body">
-                                <p class="card-intro-desc">تستهدف الخطة التوسع وتقديم خدمات الرعاية الطبية في منطقتين رئيسيتين تضم محافظات ومراكز هامة:</p>
-                                
-                                <div class="geo-layout">
-                                    <!-- Sidebar filters -->
-                                    <div class="geo-filter-panel">
-                                        <h5>تصفية المناطق الجغرافية:</h5>
-                                        <div class="search-box-container">
-                                            <i class="fa-solid fa-magnifying-glass"></i>
-                                            <input type="text" id="geo-search" placeholder="ابحث عن محافظة...">
-                                        </div>
-                                        <div class="filter-buttons">
-                                            <button class="geo-filter-btn active" data-filter="all">الكل</button>
-                                            <button class="geo-filter-btn" data-filter="riyadh">منطقة الرياض (نجد)</button>
-                                            <button class="geo-filter-btn" data-filter="madinah">منطقة المدينة المنورة</button>
-                                        </div>
-                                    </div>
-
-                                    <!-- Geographic grid list -->
-                                    <div class="geo-results-list" id="geo-list-container">
-                                        <!-- Will be rendered dynamically via JS -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Track 5 Content: Non-profit Partnerships -->
-                    <div class="track-content" id="track-5">
-                        <div class="card text-justify">
-                            <div class="card-header">
-                                <i class="fa-solid fa-handshake-angle icon-header"></i>
-                                <h3>العنصر الخامس: بناء الشراكات الفعالة مع القطاع غير الربحي (الجمعيات الخيرية)</h3>
-                            </div>
-                            <div class="card-body">
-                                <p class="card-intro-desc">يتم التنسيق والتعاقد مع القطاع الثالث لتوفير رعاية صحية مدعومة عبر خارطة طريق من 8 خطوات منظمة:</p>
-                                
-                                <div class="steps-flow-chart">
-                                    <div class="flow-step">
-                                        <span class="flow-num">1</span>
-                                        <div class="flow-content">
-                                            <h5>تحديد الجمعيات</h5>
-                                            <p>رصد الجمعيات الخيرية ذات العلاقة بالرعاية الصحية.</p>
-                                        </div>
-                                    </div>
-                                    <div class="flow-step">
-                                        <span class="flow-num">2</span>
-                                        <div class="flow-content">
-                                            <h5>حصر ومطابقة</h5>
-                                            <p>فلترة الجمعيات بحسب توافق نطاق العمل والخدمات.</p>
-                                        </div>
-                                    </div>
-                                    <div class="flow-step">
-                                        <span class="flow-num">3</span>
-                                        <div class="flow-content">
-                                            <h5>خطة التواصل</h5>
-                                            <p>بناء خطة تواصل متكاملة وتحديد قنوات الاتصال.</p>
-                                        </div>
-                                    </div>
-                                    <div class="flow-step">
-                                        <span class="flow-num">4</span>
-                                        <div class="flow-content">
-                                            <h5>رسم الخريطة</h5>
-                                            <p>تخصيص منهجية تواصل فريدة تناسب وضع كل جمعية.</p>
-                                        </div>
-                                    </div>
-                                    <div class="flow-step">
-                                        <span class="flow-num">5</span>
-                                        <div class="flow-content">
-                                            <h5>العرض الفني</h5>
-                                            <p>إعداد وتصميم مقترح عمل فني مخصص وجذاب للجمعية.</p>
-                                        </div>
-                                    </div>
-                                    <div class="flow-step">
-                                        <span class="flow-num">6</span>
-                                        <div class="flow-content">
-                                            <h5>تنفيذ التواصل</h5>
-                                            <p>عقد الاجتماعات المباشرة وتقديم العروض المكتوبة.</p>
-                                        </div>
-                                    </div>
-                                    <div class="flow-step">
-                                        <span class="flow-num">7</span>
-                                        <div class="flow-content">
-                                            <h5>متابعة دورية</h5>
-                                            <p>متابعة سير النقاشات والملاحظات وتوقيع الشراكات.</p>
-                                        </div>
-                                    </div>
-                                    <div class="flow-step">
-                                        <span class="flow-num">8</span>
-                                        <div class="flow-content">
-                                            <h5>خدمة عملاء</h5>
-                                            <p>تخصيص منسق دعم وخدمة دائم للجمعية الشريكة.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </section>
-
-                <!-- 5. KPIS & CHARTS -->
-                <section id="section-charts" class="dashboard-section">
-                    <div class="grid-2col">
-                        <!-- Chart 1: Monthly Distribution -->
-                        <div class="card">
-                            <div class="card-header">
-                                <i class="fa-solid fa-chart-column icon-header"></i>
-                                <h3>المستهدف الشهري الإجمالي (مجموع 100 مهمة)</h3>
-                            </div>
-                            <div class="card-body">
-                                <div class="chart-wrapper">
-                                    <canvas id="monthlyTargetsChart"></canvas>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Chart 2: Cumulative Progress -->
-                        <div class="card">
-                            <div class="card-header">
-                                <i class="fa-solid fa-chart-line icon-header"></i>
-                                <h3>التراكم السنوي المستهدف خلال 12 شهراً</h3>
-                            </div>
-                            <div class="card-body">
-                                <div class="chart-wrapper">
-                                    <canvas id="cumulativeTargetsChart"></canvas>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card text-justify">
-                        <div class="card-header">
-                            <i class="fa-solid fa-table-list icon-header"></i>
-                            <h3>جدول توزيع الأهداف الرقمية شهرياً لكل مسار من العناصر الخمسة</h3>
-                        </div>
-                        <div class="card-body">
-                            <div class="table-responsive">
-                                <table class="kpi-monthly-table">
-                                    <thead>
-                                        <tr>
-                                            <th>الشهر</th>
-                                            <th>نطاق العمل</th>
-                                            <th>التسجيل كمورد</th>
-                                            <th>اعتماد وفرص</th>
-                                            <th>الأماكن المستهدفة</th>
-                                            <th>الجمعيات الخيرية</th>
-                                            <th class="total-th">العقد الشهري</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>الشهر 1</td>
-                                            <td>1</td>
-                                            <td>1</td>
-                                            <td>1</td>
-                                            <td>0</td>
-                                            <td>1</td>
-                                            <td class="total-td">4</td>
-                                        </tr>
-                                        <tr>
-                                            <td>الشهر 2</td>
-                                            <td>1</td>
-                                            <td>1</td>
-                                            <td>1</td>
-                                            <td>1</td>
-                                            <td>2</td>
-                                            <td class="total-td">6</td>
-                                        </tr>
-                                        <tr>
-                                            <td>الشهر 3</td>
-                                            <td>1</td>
-                                            <td>1</td>
-                                            <td>1</td>
-                                            <td>1</td>
-                                            <td>2</td>
-                                            <td class="total-td">6</td>
-                                        </tr>
-                                        <tr>
-                                            <td>الشهر 4</td>
-                                            <td>2</td>
-                                            <td>2</td>
-                                            <td>2</td>
-                                            <td>1</td>
-                                            <td>3</td>
-                                            <td class="total-td">10</td>
-                                        </tr>
-                                        <tr>
-                                            <td>الشهر 5</td>
-                                            <td>2</td>
-                                            <td>2</td>
-                                            <td>2</td>
-                                            <td>1</td>
-                                            <td>3</td>
-                                            <td class="total-td">10</td>
-                                        </tr>
-                                        <tr>
-                                            <td>الشهر 6</td>
-                                            <td>2</td>
-                                            <td>2</td>
-                                            <td>2</td>
-                                            <td>1</td>
-                                            <td>3</td>
-                                            <td class="total-td">10</td>
-                                        </tr>
-                                        <tr>
-                                            <td>الشهر 7</td>
-                                            <td>2</td>
-                                            <td>2</td>
-                                            <td>2</td>
-                                            <td>1</td>
-                                            <td>3</td>
-                                            <td class="total-td">10</td>
-                                        </tr>
-                                        <tr>
-                                            <td>الشهر 8</td>
-                                            <td>2</td>
-                                            <td>2</td>
-                                            <td>2</td>
-                                            <td>1</td>
-                                            <td>3</td>
-                                            <td class="total-td">10</td>
-                                        </tr>
-                                        <tr>
-                                            <td>الشهر 9</td>
-                                            <td>2</td>
-                                            <td>2</td>
-                                            <td>2</td>
-                                            <td>1</td>
-                                            <td>3</td>
-                                            <td class="total-td">10</td>
-                                        </tr>
-                                        <tr>
-                                            <td>الشهر 10</td>
-                                            <td>2</td>
-                                            <td>2</td>
-                                            <td>2</td>
-                                            <td>1</td>
-                                            <td>3</td>
-                                            <td class="total-td">10</td>
-                                        </tr>
-                                        <tr>
-                                            <td>الشهر 11</td>
-                                            <td>2</td>
-                                            <td>2</td>
-                                            <td>2</td>
-                                            <td>1</td>
-                                            <td>3</td>
-                                            <td class="total-td">10</td>
-                                        </tr>
-                                        <tr>
-                                            <td>الشهر 12</td>
-                                            <td>1</td>
-                                            <td>1</td>
-                                            <td>1</td>
-                                            <td>0</td>
-                                            <td>1</td>
-                                            <td class="total-td">4</td>
-                                        </tr>
-                                    </tbody>
-                                    <tfoot>
-                                        <tr class="tfoot-total">
-                                            <td>الإجمالي السنوي</td>
-                                            <td>20 مهمة</td>
-                                            <td>20 مهمة</td>
-                                            <td>20 مهمة</td>
-                                            <td>10 مهمات</td>
-                                            <td>30 مهمة</td>
-                                            <td class="grand-total-td">100 هدف</td>
-                                        </tr>
-                                    </tfoot>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- 6. STAFFING & TEAM -->
-                <section id="section-team" class="dashboard-section">
-                    <div class="card text-justify">
-                        <div class="card-header">
-                            <i class="fa-solid fa-users icon-header"></i>
-                            <h3>الفريق التنفيذي الأساسي وتوسيع الكفاءات البشرية</h3>
-                        </div>
-                        <div class="card-body">
-                            <p class="section-intro">تبدأ الخطة بشخصين في الربع الأول وتتوسع تدريجياً لتصل إلى 5 أفراد لتلبية حجم المهام وتوزيع الضغط التشغيلي:</p>
-                            
-                            <div class="team-cards-grid">
-                                <!-- Manager -->
-                                <div class="team-member-card">
-                                    <div class="member-avatar">
-                                        <i class="fa-solid fa-user-tie"></i>
-                                    </div>
-                                    <h4>المدير (أنت)</h4>
-                                    <span class="role-badge manager-role">إشراف وتطوير أعمال</span>
-                                    <p class="member-responsibility">مسؤول عن نطاق العمل (20 هدف) + إدارة ملف اعتماد وفرص في أول 3 أشهر.</p>
-                                    <div class="member-target-indicator">
-                                        <span>المستهدف السنوي:</span>
-                                        <strong>23 مهمة</strong>
-                                    </div>
-                                </div>
-
-                                <!-- Admin/Communicator -->
-                                <div class="team-member-card">
-                                    <div class="member-avatar">
-                                        <i class="fa-solid fa-user-tie"></i>
-                                    </div>
-                                    <h4>المنسق الإداري / التواصل</h4>
-                                    <span class="role-badge coordinator-role">عمليات واتصال</span>
-                                    <p class="member-responsibility">مسؤول عن التسجيل كمورد (20 هدف) + الشراكات غير الربحية (30 هدف) + التوسع (أول 5 أشهر).</p>
-                                    <div class="member-target-indicator">
-                                        <span>المستهدف السنوي:</span>
-                                        <strong>54 مهمة</strong>
-                                    </div>
-                                </div>
-
-                                <!-- Etimad Specialist -->
-                                <div class="team-member-card status-inactive" id="team-etimad-card">
-                                    <div class="member-avatar">
-                                        <i class="fa-solid fa-user-tie"></i>
-                                    </div>
-                                    <h4>مسؤول اعتماد ومناقصات</h4>
-                                    <span class="role-badge specialist-role">ينضم الشهر 4-5</span>
-                                    <p class="member-responsibility">يتسلم إدارة ملف مناقصات اعتماد بالكامل من المدير ومتابعة العروض الفنية والمالية.</p>
-                                    <div class="member-target-indicator">
-                                        <span>المستهدف السنوي:</span>
-                                        <strong>17 مهمة</strong>
-                                    </div>
-                                </div>
-
-                                <!-- Expansion Specialist -->
-                                <div class="team-member-card status-inactive" id="team-expansion-card">
-                                    <div class="member-avatar">
-                                        <i class="fa-solid fa-user-tie"></i>
-                                    </div>
-                                    <h4>مسؤول التوسع الجغرافي</h4>
-                                    <span class="role-badge specialist-role">ينضم الشهر 6-8</span>
-                                    <p class="member-responsibility">يستلم ملف التوسع والمحافظات المستهدفة من المنسق الإداري لتنشيط وتدشين الفروع.</p>
-                                    <div class="member-target-indicator">
-                                        <span>المستهدف السنوي:</span>
-                                        <strong>6 مهمات</strong>
-                                    </div>
-                                </div>
-
-                                <!-- Support Staff -->
-                                <div class="team-member-card status-inactive" id="team-support-card">
-                                    <div class="member-avatar">
-                                        <i class="fa-solid fa-user-tie"></i>
-                                    </div>
-                                    <h4>الدعم الخامس المساعد</h4>
-                                    <span class="role-badge support-role">ينضم الشهر 9+</span>
-                                    <p class="member-responsibility">يقدم دعماً إدارياً وميدانياً وتغطية الأعمال عند ذروة التشغيل وإبرام العقود.</p>
-                                    <div class="member-target-indicator">
-                                        <span>المستهدف السنوي:</span>
-                                        <strong>دعم عام</strong>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Interactive Staffing Calendar Calculator -->
-                    <div class="card text-justify">
-                        <div class="card-header">
-                            <i class="fa-solid fa-calculator icon-header"></i>
-                            <h3>حاسبة توزيع مهام فريق العمل الشهري</h3>
-                        </div>
-                        <div class="card-body">
-                            <p class="card-intro-desc">اختر الشهر لمشاهدة توزيع المهام والمسؤولية المباشرة للموظفين النشطين في ذلك التوقيت:</p>
-                            
-                            <div class="month-calculator-layout">
-                                <div class="month-selector">
-                                    <label for="calc-month-select">الشهر المستهدف:</label>
-                                    <select id="calc-month-select">
-                                        <option value="1">الشهر الأول (تأسيس)</option>
-                                        <option value="2">الشهر الثاني</option>
-                                        <option value="3">الشهر الثالث</option>
-                                        <option value="4">الشهر الرابع (انضمام مسؤول اعتماد)</option>
-                                        <option value="5">الشهر الخامس</option>
-                                        <option value="6">الشهر السادس (انضمام مسؤول التوسع)</option>
-                                        <option value="7">الشهر السابع</option>
-                                        <option value="8">الشهر الثامن</option>
-                                        <option value="9">الشهر التاسع (انضمام الدعم الخامس)</option>
-                                        <option value="10">الشهر العاشر</option>
-                                        <option value="11">الشهر الحادي عشر</option>
-                                        <option value="12">الشهر الثاني عشر (الإغلاق السنوي)</option>
-                                    </select>
-                                </div>
-
-                                <div class="month-active-team-list" id="calc-active-staff">
-                                    <!-- Rendered dynamically -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
+            <div class="metric-card">
+                <div class="card-icon warning"><i class="fa-solid fa-bullseye"></i></div>
+                <div class="card-data">
+                    <h3>الهدف الاستراتيجي</h3>
+                    <p class="value">سوق نمو</p>
+                    <span class="subtext">الإدراج خلال 18–24 شهراً</span>
+                </div>
             </div>
-        </main>
-    </div>
+            <div class="metric-card">
+                <div class="card-icon success"><i class="fa-solid fa-flag-checkered"></i></div>
+                <div class="card-data">
+                    <h3>المحاور الاستراتيجية</h3>
+                    <p class="value">5 محاور</p>
+                    <span class="subtext">موزعة بخطة تشغيلية متكاملة</span>
+                </div>
+            </div>
+        </div>
 
-    <!-- Local JavaScript file -->
-    <script src="ASSETS/JS/app.js"></script>
+        <!-- ================== SECTIONS ================== -->
+        <div class="sections-container">
+
+            <!-- ======================================
+                 1. OVERVIEW & BRANDS
+                 ====================================== -->
+            <section id="section-overview" class="dashboard-section active-section">
+
+                <!-- Executive Summary -->
+                <div class="card">
+                    <div class="card-header">
+                        <div class="icon-header"><i class="fa-solid fa-receipt"></i></div>
+                        <h3>الملخص التنفيذي — الإطار التشغيلي وهدف الخطة</h3>
+                    </div>
+                    <div class="card-body text-justify">
+                        <p>تُعد <strong>شركة ومصنع مذاق المتحدة للتجارة (United Taste)</strong> إحدى المجموعات الوطنية الرائدة في قطاع الأغذية والمشروبات (F&amp;B) بالمملكة العربية السعودية. تعتمد الشركة على نموذج <strong>المنظومة متعددة العلامات التجارية (Multi-Brand Ecosystem)</strong>، حيث يعمل مطبخ مركزي موحد على إنتاج وتشغيل 6 علامات تجارية متخصصة تتكامل لتغطية كل شرائح المستهلك السعودي على مدار اليوم.</p>
+                        <p style="margin-top:12px">تهدف هذه الخطة الاستراتيجية إلى تحويل الشركة من الاعتماد المباشر على مبيعات التجزئة والتوصيل إلى <strong>كيان صناعي وتجاري مستدام ومورّد استراتيجي</strong> لقطاعات الأعمال (B2B/B2G)، متواجد في كافة قنوات البيع العريض (Mass Market)، مجهز بمؤشرات قياس أداء (KPIs) دقيقة لكل محور.</p>
+                        <div class="summary-bullets mt-4">
+                            <div class="bullet-item">
+                                <i class="fa-solid fa-check"></i>
+                                <span><strong>تغطية اليوم الكامل:</strong> فطور ومخبز (Khoubz &amp; Dime) صباحاً · قهوة وحلويات سريعة (KSTR) ظهراً · كيك وجمعات (Bundt, Layered, Sugar Coated) مساءً.</span>
+                            </div>
+                            <div class="bullet-item">
+                                <i class="fa-solid fa-check"></i>
+                                <span><strong>كفاءة التكاليف:</strong> الشراء الموحد للمواد الخام (الدقيق، الزبدة، الشوكولاتة) لجميع البراندات من مطبخ مركزي واحد.</span>
+                            </div>
+                            <div class="bullet-item">
+                                <i class="fa-solid fa-check"></i>
+                                <span><strong>التواجد الرقمي:</strong> تعدد الخيارات لمستهلك واحد عبر تطبيقات التوصيل بمنصة إنتاجية موحدة.</span>
+                            </div>
+                            <div class="bullet-item">
+                                <i class="fa-solid fa-check"></i>
+                                <span><strong>الإدراج المالي:</strong> بناء منظومة حوكمة تؤهل المصنع للإدراج في سوق نمو الموازي والانتقال لسوق تداول الرئيسي.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Central Kitchen -->
+                <div class="kitchen-diagram mb-6">
+                    <h4><i class="fa-solid fa-industry" style="margin-left:8px"></i>المحرك التشغيلي — المطبخ المركزي (Central Production Kitchen)</h4>
+                    <div class="kitchen-flow">
+                        <div class="kitchen-node">
+                            <i class="fa-solid fa-wheat-awn"></i>
+                            <h5>المخبوزات والخبز</h5>
+                            <p>Khoubz · Dime</p>
+                        </div>
+                        <div class="kitchen-arrow"><i class="fa-solid fa-chevron-left"></i></div>
+                        <div class="kitchen-node" style="background:rgba(197,160,89,0.15);border-color:rgba(197,160,89,0.3)">
+                            <i class="fa-solid fa-fire-burner" style="color:#e0be7d"></i>
+                            <h5 style="color:#e0be7d">المطبخ المركزي</h5>
+                            <p>مركز الإنتاج الموحد</p>
+                        </div>
+                        <div class="kitchen-arrow"><i class="fa-solid fa-chevron-left"></i></div>
+                        <div class="kitchen-node">
+                            <i class="fa-solid fa-cake-candles"></i>
+                            <h5>الكيك والحلويات</h5>
+                            <p>Bundt · Layered · Sugar Coated</p>
+                        </div>
+                        <div class="kitchen-arrow"><i class="fa-solid fa-chevron-left"></i></div>
+                        <div class="kitchen-node">
+                            <i class="fa-solid fa-ice-cream"></i>
+                            <h5>الإنتاج والتغليف</h5>
+                            <p>KSTR · Delivery</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Brand Profiles -->
+                <div class="brands-showcase-title">
+                    <i class="fa-solid fa-tags"></i>
+                    <h3>محفظة العلامات التجارية الستة (Brand Profiles)</h3>
+                </div>
+
+                <div class="brands-grid">
+                    <!-- Bundt Bakery -->
+                    <div class="brand-card">
+                        <div class="brand-image-container">
+                            <img src="ASSETS/IMGS/651370205_17962710555022863_5594189603936409245_n.jpg" class="brand-img" alt="Bundt Bakery">
+                            <span class="brand-badge">تجزئة ومقاهي · 5 فروع</span>
+                        </div>
+                        <div class="brand-card-content">
+                            <div class="brand-card-header">
+                                <h4>Bundt Bakery</h4>
+                                <span class="brand-concept-tag">فخامة الكيك الكلاسيكي وأناقة الجمعات</span>
+                            </div>
+                            <p class="brand-desc">متخصصة في كيك البوندت المخبوز في قوالب هندسية مفرغة. يدمج بين القوام الهش والصلصات الغنية التي تُسكب تفاعلياً — الخيار الأول للجمعات العائلية والهدايا.</p>
+                            <div class="brand-meta-list">
+                                <div class="brand-meta-item">
+                                    <span class="brand-meta-label">الفروع:</span>
+                                    <span class="brand-meta-val">3 الرياض (الندى، روشن، التخصصي) · الخبر · جدة</span>
+                                </div>
+                                <div class="brand-meta-item">
+                                    <span class="brand-meta-label">الجمهور:</span>
+                                    <span class="brand-meta-val">العائلات، الشركات، عشاق الهدايا الفاخرة</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Layered -->
+                    <div class="brand-card">
+                        <div class="brand-image-container">
+                            <img src="ASSETS/IMGS/656047137_18085663124587759_4644677107329847655_n.jpg" class="brand-img" alt="Layered">
+                            <span class="brand-badge">مطبخ سحابي · طلب مسبق</span>
+                        </div>
+                        <div class="brand-card-content">
+                            <div class="brand-card-header">
+                                <h4>Layered</h4>
+                                <span class="brand-concept-tag">هندسة طبقات النكهة وكيك المناسبات الفاخر</span>
+                            </div>
+                            <p class="brand-desc">براند مترف في صناعة الكيك متعدد الطبقات يركز على توازن دقيق بين القوام المقرمش والإسفنجي والكريمي مع تغليف فاخر للمناسبات.</p>
+                            <div class="brand-meta-list">
+                                <div class="brand-meta-item">
+                                    <span class="brand-meta-label">النموذج:</span>
+                                    <span class="brand-meta-val">Cloud Kitchen / توصيل مباشر</span>
+                                </div>
+                                <div class="brand-meta-item">
+                                    <span class="brand-meta-label">الجمهور:</span>
+                                    <span class="brand-meta-val">منظمو الحفلات، أصحاب المناسبات</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Khoubz -->
+                    <div class="brand-card">
+                        <div class="brand-image-container">
+                            <img src="ASSETS/IMGS/khoubz.jpg" class="brand-img" alt="Khoubz">
+                            <span class="brand-badge">مخبز حرفي · تزويد B2B</span>
+                        </div>
+                        <div class="brand-card-content">
+                            <div class="brand-card-header">
+                                <h4>خبز / Khoubz</h4>
+                                <span class="brand-concept-tag">أصالة التخمير الطبيعي والمخبوزات الحرفية</span>
+                            </div>
+                            <p class="brand-desc">مخبز حرفي عصري يلتزم بأصول الخبز التقليدي باستخدام التخمير الطبيعي (Sourdough) — يهدف لجعل الخبز الطازج جزءاً أساسياً من الحياة اليومية.</p>
+                            <div class="brand-meta-list">
+                                <div class="brand-meta-item">
+                                    <span class="brand-meta-label">الفروع:</span>
+                                    <span class="brand-meta-val">فرع إنتاج واحد (الرياض) + تزويد B2B</span>
+                                </div>
+                                <div class="brand-meta-item">
+                                    <span class="brand-meta-label">الجمهور:</span>
+                                    <span class="brand-meta-val">العائلات، عشاق الصحة، المقاهي الشريكة</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Sugar Coated -->
+                    <div class="brand-card">
+                        <div class="brand-image-container">
+                            <img src="ASSETS/IMGS/656272380_18102835472499143_26508549025595502_n.jpg" class="brand-img" alt="Sugar Coated">
+                            <span class="brand-badge">مطبخ سحابي · تطبيقات توصيل</span>
+                        </div>
+                        <div class="brand-card-content">
+                            <div class="brand-card-header">
+                                <h4>Sugar Coated</h4>
+                                <span class="brand-concept-tag">عالم الحلويات المبهجة والشوكولاتة الغنية</span>
+                            </div>
+                            <p class="brand-desc">علامة حيوية تركز على الحلويات المغطاة بالشوكولاتة والصلصات الغنية — جاذبة بصرياً ومثالية لمشاركتها على منصات التواصل الاجتماعي.</p>
+                            <div class="brand-meta-list">
+                                <div class="brand-meta-item">
+                                    <span class="brand-meta-label">النموذج:</span>
+                                    <span class="brand-meta-val">Delivery-First Cloud Concept</span>
+                                </div>
+                                <div class="brand-meta-item">
+                                    <span class="brand-meta-label">الجمهور:</span>
+                                    <span class="brand-meta-val">الشباب، المراهقون، محبو الحلويات الغنية</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- KSTR -->
+                    <div class="brand-card">
+                        <div class="brand-image-container">
+                            <img src="ASSETS/IMGS/656920268_18569919976016109_7554684588170480103_n.jpg" class="brand-img" alt="KSTR">
+                            <span class="brand-badge">Grab &amp; Go · فرعان</span>
+                        </div>
+                        <div class="brand-card-content">
+                            <div class="brand-card-header">
+                                <h4>KSTR / كستر</h4>
+                                <span class="brand-concept-tag">الانتعاش الكريمي والحلويات الباردة السريعة</span>
+                            </div>
+                            <p class="brand-desc">مفهوم شبابي عصري يركز على الكاسترد المثلج (Frozen Custard) والآيس كريم الحرفي بأسلوب الخدمة السريعة — يدمج بين القوام الكريمي والمخبوزات الدافئة.</p>
+                            <div class="brand-meta-list">
+                                <div class="brand-meta-item">
+                                    <span class="brand-meta-label">الفروع:</span>
+                                    <span class="brand-meta-val">الرياض (المصيف) · الخبر (طريق الملك فيصل)</span>
+                                </div>
+                                <div class="brand-meta-item">
+                                    <span class="brand-meta-label">الجمهور:</span>
+                                    <span class="brand-meta-val">الجيل الشاب، الباحثون عن تحلية سريعة</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Dime -->
+                    <div class="brand-card">
+                        <div class="brand-image-container">
+                            <img src="ASSETS/IMGS/661217278_17990443925940181_6123092801143164914_n.jpg" class="brand-img" alt="Dime">
+                            <span class="brand-badge">براند سحابي · Virtual Brand</span>
+                        </div>
+                        <div class="brand-card-content">
+                            <div class="brand-card-header">
+                                <h4>Dime</h4>
+                                <span class="brand-concept-tag">الوجبات الخفيفة والساندويتشات العصرية السريعة</span>
+                            </div>
+                            <p class="brand-desc">علامة سحابية مرنة تقدم الساندويتشات المبتكرة والوجبات الخفيفة من مخبوزات طازجة وصلصات خاصة — مصمم لأسلوب الحياة المزدحم والتوصيل السريع.</p>
+                            <div class="brand-meta-list">
+                                <div class="brand-meta-item">
+                                    <span class="brand-meta-label">النموذج:</span>
+                                    <span class="brand-meta-val">Virtual Brand / مطابخ سحابية</span>
+                                </div>
+                                <div class="brand-meta-item">
+                                    <span class="brand-meta-label">الجمهور:</span>
+                                    <span class="brand-meta-val">الموظفون، الطلاب، محبو الوجبات الخفيفة</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- ======================================
+                 2. AXIS 1 — VENDOR REGISTRATION
+                 ====================================== -->
+            <section id="section-axis1" class="dashboard-section">
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="icon-header"><i class="fa-solid fa-building-user"></i></div>
+                        <h3>المحور الأول: حصر الجهات والتسجيل كمورد (Vendor Registration &amp; Prequalification)</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="section-intro"><strong>الهدف الاستراتيجي:</strong> بناء البنية التحتية النظامية للتأهيل الرسمي لدخول المناقصات، عقود التوريد، والطلبات الحكومية والشركات الكبرى. يُعدّ هذا المحور الأساس الذي تنبني عليه جميع قنوات B2B و B2G.</p>
+
+                        <div class="section-label">
+                            <h3>خطوات التنفيذ الثلاث</h3>
+                        </div>
+
+                        <div class="axis-steps-grid">
+                            <div class="axis-step-card">
+                                <div class="step-icon"><i class="fa-solid fa-landmark-dome"></i></div>
+                                <h5>التأهيل الحكومي وشبه الحكومي</h5>
+                                <p>التسجيل والاعتماد الفوري في <strong>منصة إعتماد</strong>، وتحديث بيانات المصنع لدى الوزارات، الهيئات، والشركات القابضة (المستشفيات، القطاعات العسكرية، الجامعات).</p>
+                                <div class="inline-badges mt-4">
+                                    <span class="badge badge-gold"><i class="fa-solid fa-check-circle"></i> منصة إعتماد</span>
+                                    <span class="badge badge-info">B2G</span>
+                                </div>
+                            </div>
+                            <div class="axis-step-card">
+                                <div class="step-icon"><i class="fa-solid fa-plane-departure"></i></div>
+                                <h5>تأهيل قطاع الضيافة والإعاشة (HoReCa)</h5>
+                                <p>حصر سلاسل الفنادق، شركات الطيران (Saudia, Riyadh Air)، وشركات الإعاشة الكبرى لبناء علاقات شراكة تزويدية طويلة الأجل.</p>
+                                <div class="inline-badges mt-4">
+                                    <span class="badge badge-gold"><i class="fa-solid fa-hotel"></i> فنادق</span>
+                                    <span class="badge badge-choco"><i class="fa-solid fa-plane"></i> طيران</span>
+                                </div>
+                            </div>
+                            <div class="axis-step-card">
+                                <div class="step-icon"><i class="fa-solid fa-file-invoice"></i></div>
+                                <h5>إعداد ملف التأهيل الموحد (Vendor Deck)</h5>
+                                <p>صياغة ملف فني ومالي احترافي يُبرز قدرات المصنع الإنتاجية، شهادات الجودة (HACCP/ISO)، وسجل أعمال البراندات الستة المدعومة بالأرقام.</p>
+                                <div class="inline-badges mt-4">
+                                    <span class="badge badge-success"><i class="fa-solid fa-shield-halved"></i> HACCP/ISO</span>
+                                    <span class="badge badge-gold">Vendor Deck</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="alert-box gold mt-4">
+                            <i class="fa-solid fa-lightbulb"></i>
+                            <p><strong>توصية تشغيلية:</strong> يجب استخراج شهادات HACCP وتحديث السجل التجاري قبل رفع أي طلب تأهيل، إذ تُعدّ من المتطلبات الإلزامية لدى 85% من الجهات الحكومية.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- KPIs -->
+                <div class="card">
+                    <div class="card-header">
+                        <div class="icon-header"><i class="fa-solid fa-chart-bar"></i></div>
+                        <h3>مؤشرات الأداء الرئيسية (KPIs) — المحور الأول</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="kpi-cards-row">
+                            <div class="kpi-highlight-card">
+                                <div class="kpi-value">20+</div>
+                                <div class="kpi-label">عدد الاعتمادات التنافسية</div>
+                                <div class="kpi-desc">تسجيل المصنع في 20+ جهة حكومية وشركات كبرى خلال أول 90 يوماً من بدء التنفيذ.</div>
+                            </div>
+                            <div class="kpi-highlight-card">
+                                <div class="kpi-value">85%</div>
+                                <div class="kpi-label">معدل قبول ملفات التأهيل</div>
+                                <div class="kpi-desc">Prequalification Approval Rate — نسبة قبول لا تقل عن 85% من إجمالي طلبات التأهيل المرفوعة.</div>
+                            </div>
+                            <div class="kpi-highlight-card">
+                                <div class="kpi-value">48h</div>
+                                <div class="kpi-label">زمن الاستجابة للطلبات</div>
+                                <div class="kpi-desc">Response Lead Time — تقديم ملفات الاعتماد والعروض الفنية خلال 48 ساعة من فتح باب التأهيل.</div>
+                            </div>
+                        </div>
+
+                        <!-- B2B Prospects Table -->
+                        <div class="section-label">
+                            <h3>قائمة عقود الإعاشة والتموين المرصودة</h3>
+                            <span>B2B/B2G Prospects</span>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>م</th>
+                                        <th>اسم عقد التموين</th>
+                                        <th>الجهة المستهدفة</th>
+                                        <th>النوع</th>
+                                        <th>القيمة التقديرية السنوية</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>تموين وإعاشة رحلات الطيران</td>
+                                        <td>الخطوط الجوية العربية السعودية (Saudia)</td>
+                                        <td><span class="badge badge-info">إعاشة جوية</span></td>
+                                        <td class="money-text">45,000,000 ريال</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>إمداد الحلويات والمخبوزات VIP</td>
+                                        <td>طيران الرياض (Riyadh Air)</td>
+                                        <td><span class="badge badge-gold">ضيافة خاصة</span></td>
+                                        <td class="money-text">32,500,000 ريال</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>تموين وتغذية نزلاء المستشفيات</td>
+                                        <td>وزارة الصحة (Ministry of Health)</td>
+                                        <td><span class="badge badge-success">B2G مناقصات</span></td>
+                                        <td class="money-text">68,000,000 ريال</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>توريد حلويات المناسبات والمؤتمرات</td>
+                                        <td>أرامكو السعودية (Aramco VIP)</td>
+                                        <td><span class="badge badge-choco">ضيافة شركات</span></td>
+                                        <td class="money-text">18,200,000 ريال</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>توريد الأغذية لمشاريع الترفيه</td>
+                                        <td>القدية للاستثمار (Qiddiya Events)</td>
+                                        <td><span class="badge badge-gold">سياحة وفعاليات</span></td>
+                                        <td class="money-text">14,500,000 ريال</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- ======================================
+                 3. AXIS 2 — 5 SALES CHANNELS
+                 ====================================== -->
+            <section id="section-channels" class="dashboard-section">
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="icon-header"><i class="fa-solid fa-sitemap"></i></div>
+                        <h3>المحور الثاني: هندسة قنوات البيع الخمسة (Omnichannel Sales Management)</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="section-intro"><strong>الهدف الاستراتيجي:</strong> توزيع منتجات المصنع على 5 قنوات بيعية مستقلة، مع تخصيص مدير لكل قناة (Key Account Manager) بخطة عمل ومؤشرات أداء واضحة لضمان الحوكمة والسيطرة التامة.</p>
+
+                        <!-- Channel Tabs -->
+                        <div class="channels-nav">
+                            <button class="channel-tab-btn active" data-channel="ch-1" id="ch-btn-1">
+                                <i class="fa-solid fa-store"></i><span>1. الفروع المباشرة</span>
+                            </button>
+                            <button class="channel-tab-btn" data-channel="ch-2" id="ch-btn-2">
+                                <i class="fa-solid fa-cart-shopping"></i><span>2. السوبرماركت</span>
+                            </button>
+                            <button class="channel-tab-btn" data-channel="ch-3" id="ch-btn-3">
+                                <i class="fa-solid fa-truck-fast"></i><span>3. عربات التوزيع</span>
+                            </button>
+                            <button class="channel-tab-btn" data-channel="ch-4" id="ch-btn-4">
+                                <i class="fa-solid fa-percent"></i><span>4. الحلى المخفض</span>
+                            </button>
+                            <button class="channel-tab-btn" data-channel="ch-5" id="ch-btn-5">
+                                <i class="fa-solid fa-handshake"></i><span>5. مبيعات B2B</span>
+                            </button>
+                        </div>
+
+                        <!-- Channel 1 -->
+                        <div class="channel-content active-channel" id="ch-1">
+                            <div class="channel-officer-badge">
+                                <div class="officer-icon"><i class="fa-solid fa-user-tie"></i></div>
+                                <div class="officer-info">
+                                    <h5>المسؤول عن القناة</h5>
+                                    <strong>مدير قطاع التجزئة والنقاط المستقلة (Retail Channel Manager)</strong>
+                                </div>
+                            </div>
+                            <div class="channel-detail-layout">
+                                <div class="channel-info-col">
+                                    <h4>القناة الأولى: الفروع المباشرة، النقاط المستقلة، وزوايا العرض</h4>
+                                    <ul class="channel-plan-list">
+                                        <li><i class="fa-solid fa-circle-dot"></i><span><strong>المفهوم:</strong> نشر فروع ونقاط بيع سريعة (Kiosks / Shop-in-Shop) لتغطية البراندات الرئيسية.</span></li>
+                                        <li><i class="fa-solid fa-circle-dot"></i><span>إدارة وتطوير الفروع الحالية (Bundt Bakery 5 فروع، KSTR فرعان، Khoubz فرع).</span></li>
+                                        <li><i class="fa-solid fa-circle-dot"></i><span>التوسع في نقاط بيع سريعة في المجمعات، محطات القطارات، والأماكن الحيوية.</span></li>
+                                        <li><i class="fa-solid fa-circle-dot"></i><span>توفير سلة منتجات مشتركة للبراندات الستة بكثافة عالية وتكلفة رأسمالية منخفضة (CAPEX).</span></li>
+                                        <li><i class="fa-solid fa-circle-dot"></i><span>تقنيات البيع المتقاطع (Cross-Selling) لرفع متوسط حجم السلة بـ 15%.</span></li>
+                                    </ul>
+                                </div>
+                                <div class="channel-kpi-col">
+                                    <div class="kpi-mini-cards">
+                                        <div class="kpi-mini-card">
+                                            <div class="kpi-mini-name">Daily Sales per Outlet</div>
+                                            <div class="kpi-mini-target">مبيعات يومية مستهدفة</div>
+                                            <div class="kpi-mini-desc">تحقيق متوسط مبيعات لكل منفذ جديد</div>
+                                        </div>
+                                        <div class="kpi-mini-card">
+                                            <div class="kpi-mini-name">Average Basket Size</div>
+                                            <div class="kpi-mini-target">+15% قيمة السلة</div>
+                                            <div class="kpi-mini-desc">رفع قيمة السلة عبر تقنيات Cross-Selling</div>
+                                        </div>
+                                        <div class="kpi-mini-card">
+                                            <div class="kpi-mini-name">MoM Retail Growth</div>
+                                            <div class="kpi-mini-target">نمو 8% شهرياً</div>
+                                            <div class="kpi-mini-desc">نمو إيرادات التجزئة بـ 8% شهرياً على الأقل</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Channel 2 -->
+                        <div class="channel-content" id="ch-2">
+                            <div class="channel-officer-badge">
+                                <div class="officer-icon"><i class="fa-solid fa-user-tie"></i></div>
+                                <div class="officer-info">
+                                    <h5>المسؤول عن القناة</h5>
+                                    <strong>مدير قناة التجزئة الحديثة والسوبرماركت (Modern Trade Account Manager)</strong>
+                                </div>
+                            </div>
+                            <div class="channel-detail-layout">
+                                <div class="channel-info-col">
+                                    <h4>القناة الثانية: أسواق التجزئة الكبرى والسوبرماركت (Modern Trade / FMCG)</h4>
+                                    <ul class="channel-plan-list">
+                                        <li><i class="fa-solid fa-circle-dot"></i><span><strong>المفهوم:</strong> تحويل المنتجات المناسبة إلى منتجات استهلاكية سريعة الدوران (FMCG).</span></li>
+                                        <li><i class="fa-solid fa-circle-dot"></i><span>التسجيل كمورد معتمد لدى: <strong>التميمي، الدانوب، بن داود، بنده، العثيم، لولو</strong>.</span></li>
+                                        <li><i class="fa-solid fa-circle-dot"></i><span>إعادة تصميم التغليف لتلائم معايير البيع على الأرفف (Shelf-Ready Packaging).</span></li>
+                                        <li><i class="fa-solid fa-circle-dot"></i><span>التفاوض على رسوم الأرفف (Listing Fees) والحصول على مواقع عرض استراتيجية.</span></li>
+                                        <li><i class="fa-solid fa-circle-dot"></i><span>تطوير خطوط تغليف بتقنيات حفظ حديثة (Long Shelf-Life / Freeze-Baked).</span></li>
+                                    </ul>
+                                </div>
+                                <div class="channel-kpi-col">
+                                    <div class="kpi-mini-cards">
+                                        <div class="kpi-mini-card">
+                                            <div class="kpi-mini-name">SKUs Listed</div>
+                                            <div class="kpi-mini-target">10 SKUs في 3 سلاسل</div>
+                                            <div class="kpi-mini-desc">خلال 6 أشهر من بدء التنفيذ</div>
+                                        </div>
+                                        <div class="kpi-mini-card">
+                                            <div class="kpi-mini-name">Shelf Turnover Rate</div>
+                                            <div class="kpi-mini-target">مرتان أسبوعياً</div>
+                                            <div class="kpi-mini-desc">نفاد وإعادة تغذية المخزون لكل فرع</div>
+                                        </div>
+                                        <div class="kpi-mini-card">
+                                            <div class="kpi-mini-name">Return / Wastage Rate</div>
+                                            <div class="kpi-mini-target">أقل من 3%</div>
+                                            <div class="kpi-mini-desc">نسبة المرتجعات من السوبرماركت</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Channel 3 -->
+                        <div class="channel-content" id="ch-3">
+                            <div class="channel-officer-badge">
+                                <div class="officer-icon"><i class="fa-solid fa-user-tie"></i></div>
+                                <div class="officer-info">
+                                    <h5>المسؤول عن القناة</h5>
+                                    <strong>مشرف المبيعات الميدانية والكاش فان (Cash Van Fleet Supervisor)</strong>
+                                </div>
+                            </div>
+                            <div class="channel-detail-layout">
+                                <div class="channel-info-col">
+                                    <h4>القناة الثالثة: التوزيع الميداني السريع للمقاهي (Cash Van Fleet)</h4>
+                                    <ul class="channel-plan-list">
+                                        <li><i class="fa-solid fa-circle-dot"></i><span><strong>المفهوم:</strong> اختراق سوق المقاهي المستقلة بنموذج النقد المباشر والتسليم الفوري (Cash &amp; Carry).</span></li>
+                                        <li><i class="fa-solid fa-circle-dot"></i><span>تقسيم الرياض إلى خطوط سير جغرافية (Van Routes) لتغطية شاملة.</span></li>
+                                        <li><i class="fa-solid fa-circle-dot"></i><span>تشغيل سيارات توزيع مبردة بكادر مناديب ميدانيين للبيع والتحصيل الفوري.</span></li>
+                                        <li><i class="fa-solid fa-circle-dot"></i><span>استهداف المقاهي المستقلة (Single-Door Cafés) ذات القوة الشرائية اليومية.</span></li>
+                                        <li><i class="fa-solid fa-circle-dot"></i><span>سياسة <strong>صفر ائتمان</strong> — تحصيل نقدي 100% دون دين آجل.</span></li>
+                                    </ul>
+                                </div>
+                                <div class="channel-kpi-col">
+                                    <div class="kpi-mini-cards">
+                                        <div class="kpi-mini-card">
+                                            <div class="kpi-mini-name">Daily Cash Collection per Van</div>
+                                            <div class="kpi-mini-target">هدف يومي محدد</div>
+                                            <div class="kpi-mini-desc">مبلغ تحصيل نقدي يومي لكل سيارة توزيع</div>
+                                        </div>
+                                        <div class="kpi-mini-card">
+                                            <div class="kpi-mini-name">Active Outlets Served</div>
+                                            <div class="kpi-mini-target">25-30 مقهى/يوم</div>
+                                            <div class="kpi-mini-desc">لكل خط سير جغرافي واحد</div>
+                                        </div>
+                                        <div class="kpi-mini-card">
+                                            <div class="kpi-mini-name">Cash Sales Ratio</div>
+                                            <div class="kpi-mini-target">100% نقداً</div>
+                                            <div class="kpi-mini-desc">تحصيل نقدي فوري — صفر ائتمان آجل</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Channel 4 -->
+                        <div class="channel-content" id="ch-4">
+                            <div class="channel-officer-badge">
+                                <div class="officer-icon"><i class="fa-solid fa-user-tie"></i></div>
+                                <div class="officer-info">
+                                    <h5>المسؤول عن القناة</h5>
+                                    <strong>مسؤول قناة التصفية والمنتجات الاقتصادية (Outlet &amp; Discount Channel Officer)</strong>
+                                </div>
+                            </div>
+                            <div class="channel-detail-layout">
+                                <div class="channel-info-col">
+                                    <h4>القناة الرابعة: متاجر الحلى المخفض والخطوط الاقتصادية (Zero-Waste Strategy)</h4>
+                                    <ul class="channel-plan-list">
+                                        <li><i class="fa-solid fa-circle-dot"></i><span><strong>المفهوم:</strong> تحويل الهدر والتكاليف الضائعة إلى سيولة نقدية مباشرة عبر تصنيع خطوط اقتصادية.</span></li>
+                                        <li><i class="fa-solid fa-circle-dot"></i><span>تطبيق استراتيجية <strong>Zero-Waste</strong>: استغلال زوائد التصنيع وتحويلها لمنتجات مبتكرة (Cake Pops, Trifles).</span></li>
+                                        <li><i class="fa-solid fa-circle-dot"></i><span>التعاقد مع سلاسل الحلى المخفض: <strong>أول الحلى، أهل الحلى</strong>.</span></li>
+                                        <li><i class="fa-solid fa-circle-dot"></i><span>خفض نسبة الهدر في المطبخ المركزي إلى أقل من 2% إجمالياً.</span></li>
+                                        <li><i class="fa-solid fa-circle-dot"></i><span>الحفاظ على هامش ربح لا يقل عن 40% بعد خصم تكاليف إعادة التصنيع.</span></li>
+                                    </ul>
+                                </div>
+                                <div class="channel-kpi-col">
+                                    <div class="kpi-mini-cards">
+                                        <div class="kpi-mini-card">
+                                            <div class="kpi-mini-name">Total Waste Reduction</div>
+                                            <div class="kpi-mini-target">أقل من 2%</div>
+                                            <div class="kpi-mini-desc">خفض نسبة الهدر الكلي بالمطبخ المركزي</div>
+                                        </div>
+                                        <div class="kpi-mini-card">
+                                            <div class="kpi-mini-name">Bulk Volume Sold</div>
+                                            <div class="kpi-mini-target">2-3 أطنان/شهر</div>
+                                            <div class="kpi-mini-desc">من الخطوط الاقتصادية شهرياً</div>
+                                        </div>
+                                        <div class="kpi-mini-card">
+                                            <div class="kpi-mini-name">Gross Margin</div>
+                                            <div class="kpi-mini-target">هامش ≥ 40%</div>
+                                            <div class="kpi-mini-desc">بعد خصم تكاليف إعادة التصنيع</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Channel 5 -->
+                        <div class="channel-content" id="ch-5">
+                            <div class="channel-officer-badge">
+                                <div class="officer-icon"><i class="fa-solid fa-user-tie"></i></div>
+                                <div class="officer-info">
+                                    <h5>المسؤول عن القناة</h5>
+                                    <strong>مدير مبيعات الشركات وكبار العملاء (B2B Key Account Manager)</strong>
+                                </div>
+                            </div>
+                            <div class="channel-detail-layout">
+                                <div class="channel-info-col">
+                                    <h4>القناة الخامسة: مبيعات الشركات، الإعاشة، والمناقصات (B2B &amp; Government)</h4>
+                                    <ul class="channel-plan-list">
+                                        <li><i class="fa-solid fa-circle-dot"></i><span><strong>المفهوم:</strong> إبرام عقود التوريد طويلة الأجل والتصنيع لحساب الغير (Private Labeling).</span></li>
+                                        <li><i class="fa-solid fa-circle-dot"></i><span>الدخول في المناقصات الحكومية عبر منصة إعتماد وخارجها.</span></li>
+                                        <li><i class="fa-solid fa-circle-dot"></i><span>تصميم باقات إهداء مخصصة للشركات للفعاليات والمناسبات الكبرى.</span></li>
+                                        <li><i class="fa-solid fa-circle-dot"></i><span>تصنيع خاص (Private Labeling) للمقاهي والفنادق والشركات الكبرى.</span></li>
+                                        <li><i class="fa-solid fa-circle-dot"></i><span>بناء علاقات شراكة مع متعهدي الإعاشة الكبار (Catering Operators).</span></li>
+                                    </ul>
+                                    <!-- B2B 8-step flow -->
+                                    <div class="section-label" style="margin-top:20px">
+                                        <h3>دورة إبرام عقد B2B (8 خطوات)</h3>
+                                    </div>
+                                    <div class="steps-flow-chart">
+                                        <div class="flow-step"><span class="flow-num">1</span><div class="flow-content"><h5>استلام RFP</h5><p>استقبال طلب التسعير وتفاصيل المنتجات.</p></div></div>
+                                        <div class="flow-step"><span class="flow-num">2</span><div class="flow-content"><h5>دراسة فنية</h5><p>تحليل التكلفة وتقدير الطاقة الإنتاجية.</p></div></div>
+                                        <div class="flow-step"><span class="flow-num">3</span><div class="flow-content"><h5>جلسة تذوق</h5><p>تحضير عينات لمطابقة جودة العميل.</p></div></div>
+                                        <div class="flow-step"><span class="flow-num">4</span><div class="flow-content"><h5>العرض التجاري</h5><p>تسليم المقترح المالي النهائي.</p></div></div>
+                                        <div class="flow-step"><span class="flow-num">5</span><div class="flow-content"><h5>خطاب النوايا</h5><p>توقيع LOI ومراجعة شروط الدفع.</p></div></div>
+                                        <div class="flow-step"><span class="flow-num">6</span><div class="flow-content"><h5>توقيع العقد</h5><p>SLA + الشروط القانونية للتوريد.</p></div></div>
+                                        <div class="flow-step"><span class="flow-num">7</span><div class="flow-content"><h5>جدولة الإنتاج</h5><p>إدخال المنتجات في الخطة اليومية.</p></div></div>
+                                        <div class="flow-step"><span class="flow-num">8</span><div class="flow-content"><h5>تقييم دوري</h5><p>فحص رضا العميل وتجديد العقد.</p></div></div>
+                                    </div>
+                                </div>
+                                <div class="channel-kpi-col">
+                                    <div class="kpi-mini-cards">
+                                        <div class="kpi-mini-card">
+                                            <div class="kpi-mini-name">Annual Contract Value (ACV)</div>
+                                            <div class="kpi-mini-target">قيمة مستهدفة</div>
+                                            <div class="kpi-mini-desc">إغلاق عقود توريد B2B بمبالغ محددة سنوياً</div>
+                                        </div>
+                                        <div class="kpi-mini-card">
+                                            <div class="kpi-mini-name">Tender Win Rate</div>
+                                            <div class="kpi-mini-target">نسبة ترسية ≥30%</div>
+                                            <div class="kpi-mini-desc">من إجمالي المناقصات المقدم عليها</div>
+                                        </div>
+                                        <div class="kpi-mini-card">
+                                            <div class="kpi-mini-name">Customer Retention Rate</div>
+                                            <div class="kpi-mini-target">تجديد 80% سنوياً</div>
+                                            <div class="kpi-mini-desc">نسبة تجديد عقود عملاء B2B</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- KPI MATRIX -->
+                <div class="card">
+                    <div class="card-header">
+                        <div class="icon-header"><i class="fa-solid fa-table-list"></i></div>
+                        <h3>ملخص مصفوفة مؤشرات الأداء لقنوات البيع الخمسة (KPI Matrix)</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="kpi-matrix-table">
+                                <thead>
+                                    <tr>
+                                        <th>القناة البيعية</th>
+                                        <th>المسؤول عن القناة</th>
+                                        <th>مؤشر الأداء الرئيسي</th>
+                                        <th>المستهدف القياسي</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1. الفروع المباشرة والنقاط</td>
+                                        <td>مدير قطاع التجزئة</td>
+                                        <td>مبيعات النقطة اليومية + نمو السلة</td>
+                                        <td><span class="target-badge">نمو 8% شهرياً</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2. السوبرماركت والتجزئة الحديثة</td>
+                                        <td>مدير الـ Modern Trade</td>
+                                        <td>عدد المدرجات (SKUs) + دوران الرف</td>
+                                        <td><span class="target-badge">10 SKUs / مرتان/أسبوع</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>3. الكاش فان والمقاهي</td>
+                                        <td>مشرف الكاش فان</td>
+                                        <td>التحصيل النقدي اليومي + المقاهي المخدومة</td>
+                                        <td><span class="target-badge">100% نقد / 25 مقهى</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>4. الحلى المخفض والأوتلت</td>
+                                        <td>مسؤول قناة التصفية</td>
+                                        <td>حجم الكميات المباعة + نسبة الهدر</td>
+                                        <td><span class="target-badge">هدر &lt; 2%</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>5. الشركات والمناقصات (B2B)</td>
+                                        <td>مدير كبار العملاء</td>
+                                        <td>قيمة العقود المبرمة + نسبة الترسية</td>
+                                        <td><span class="target-badge">ترسية ≥ 30%</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- ======================================
+                 4. AXIS 3 — LOCAL CONTENT
+                 ====================================== -->
+            <section id="section-axis3" class="dashboard-section">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="icon-header"><i class="fa-solid fa-certificate"></i></div>
+                        <h3>المحور الثالث: شهادة المحتوى المحلي والقيمة الوطنية (Local Content Strategy)</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="section-intro"><strong>الهدف الاستراتيجي:</strong> بناء ميزة تنافسية رسمية تضمن أولوية الترسية في المشاريع الحكومية والكيانات الوطنية. شهادة المحتوى المحلي تمنح المصنع أفضلية سعرية بنسبة <strong>10%</strong> في كل مناقصة حكومية.</p>
+
+                        <div class="axis-steps-grid">
+                            <div class="axis-step-card">
+                                <div class="step-icon"><i class="fa-solid fa-file-circle-check"></i></div>
+                                <h5>استخراج الشهادة الأولى فوراً</h5>
+                                <p>استخراج شهادة المحتوى المحلي بالوضع الحالي للمصنع لاستخدامها فوراً في المناقصات والعروض الحكومية المقدمة.</p>
+                            </div>
+                            <div class="axis-step-card">
+                                <div class="step-icon"><i class="fa-solid fa-arrow-trend-up"></i></div>
+                                <h5>خطة رفع نسبة المحتوى المحلي</h5>
+                                <p>وضع خطة زمنية مستهدفة لرفع نسبة المحتوى المحلي في القوائم المالية بمقدار 10-15 نقطة مئوية للسنة القادمة.</p>
+                            </div>
+                            <div class="axis-step-card">
+                                <div class="step-icon"><i class="fa-solid fa-handshake-angle"></i></div>
+                                <h5>التأهيل التنافسي في المناقصات</h5>
+                                <p>توظيف الشهادة في 100% من العروض الحكومية للاستفادة من تفضيل السعر الوطني في جميع المناقصات والمنافسات.</p>
+                            </div>
+                        </div>
+
+                        <div class="kpi-cards-row mt-4">
+                            <div class="kpi-highlight-card">
+                                <div class="kpi-value">45</div>
+                                <div class="kpi-label">يوماً — زمن إصدار الشهادة</div>
+                                <div class="kpi-desc">إنهاء إجراءات التدقيق واستخراج شهادة المحتوى المحلي خلال مدة لا تتجاوز 45 يوماً.</div>
+                            </div>
+                            <div class="kpi-highlight-card">
+                                <div class="kpi-value">+15%</div>
+                                <div class="kpi-label">نمو نسبة المحتوى المحلي</div>
+                                <div class="kpi-desc">رفع نسبة المحتوى المحلي YoY بمقدار 10%-15% نقطة مئوية في القوائم المالية للسنة القادمة.</div>
+                            </div>
+                            <div class="kpi-highlight-card">
+                                <div class="kpi-value">100%</div>
+                                <div class="kpi-label">توظيف الشهادة في العروض</div>
+                                <div class="kpi-desc">استخدام الشهادة في 100% من العروض الحكومية المقدمة للاستفادة من الأفضلية السعرية الوطنية.</div>
+                            </div>
+                        </div>
+
+                        <div class="alert-box success mt-4">
+                            <i class="fa-solid fa-star"></i>
+                            <p><strong>الأثر التنافسي:</strong> شهادة المحتوى المحلي تمنح المصنع أفضلية تلقائية بنسبة 10% على المنافسين الأجانب في تقييم العروض الحكومية، مما يرفع احتمالية الترسية بشكل مباشر في عقود B2G.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ======================================
+                 5. AXIS 4 — GROWTH & EXPANSION
+                 ====================================== -->
+            <section id="section-growth" class="dashboard-section">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="icon-header"><i class="fa-solid fa-rocket"></i></div>
+                        <h3>المحور الرابع: التوسع الشامل، الشراكات الاستراتيجية، والنمو</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="section-intro"><strong>الهدف الاستراتيجي:</strong> رفع القيمة السوقية للمصنع والانتقال به من إطار العمل المحلي إلى صرح استثماري وصناعي واسع الانتشار، عبر ثلاثة مسارات متوازية للنمو.</p>
+
+                        <div class="growth-paths-grid">
+                            <!-- Path 1 -->
+                            <div class="growth-path-card">
+                                <div class="growth-path-header">
+                                    <div class="growth-path-icon"><i class="fa-solid fa-network-wired"></i></div>
+                                    <div>
+                                        <h4>مسار الانتشار والشراكات الوطنية</h4>
+                                        <span>National Footprint</span>
+                                    </div>
+                                </div>
+                                <div class="growth-path-body">
+                                    <p>عقد شراكات استراتيجية مع الكيانات الوطنية والتوسع بنموذج "الحضور في كل حي" (نموذج بيت الشاورما). بناء تحالفات مع محافظ الصناديق الاستثمارية للتوسع السريع بتكلفة منخفضة.</p>
+                                    <div class="growth-kpi-list">
+                                        <div class="growth-kpi-item"><i class="fa-solid fa-check-circle"></i><span>إبرام عقد شراكة استراتيجي واحد مع كيان وطني أو محفظة استثمارية خلال 12 شهراً.</span></div>
+                                        <div class="growth-kpi-item"><i class="fa-solid fa-check-circle"></i><span>التوسع الجغرافي بتغطية 15 حي جديد بنقاط توزيع سريعة خلال السنة الأولى.</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Path 2 -->
+                            <div class="growth-path-card">
+                                <div class="growth-path-header">
+                                    <div class="growth-path-icon"><i class="fa-solid fa-boxes-packing"></i></div>
+                                    <div>
+                                        <h4>مسار التحول إلى FMCG</h4>
+                                        <span>نموذج شركة ديمة</span>
+                                    </div>
+                                </div>
+                                <div class="growth-path-body">
+                                    <p>تطوير خطوط إنتاج وتغليف بتقنيات حفظ حديثة (Freeze-Baked / Packaged Sweets) للبيع الجماهيري العريض — تحويل المنتجات لسلع استهلاكية سريعة الدوران على مستوى وطني.</p>
+                                    <div class="growth-kpi-list">
+                                        <div class="growth-kpi-item"><i class="fa-solid fa-check-circle"></i><span>تطوير 3 خطوط إنتاج ذات صلاحية ممتدة (Long Shelf-Life SKUs) جاهزة للتوزيع الوطني.</span></div>
+                                        <div class="growth-kpi-item"><i class="fa-solid fa-check-circle"></i><span>تحقيق 25% من إيرادات المصنع من قنوات التوزيع العريض (FMCG).</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Path 3 -->
+                            <div class="growth-path-card">
+                                <div class="growth-path-header">
+                                    <div class="growth-path-icon"><i class="fa-solid fa-chart-line"></i></div>
+                                    <div>
+                                        <h4>مسار الإدراج والتخارج المالي</h4>
+                                        <span>Financial Listing Strategy</span>
+                                    </div>
+                                </div>
+                                <div class="growth-path-body">
+                                    <p>التهيؤ والحوكمة للإدراج في <strong>سوق نمو الموازي</strong> تمهيداً للانتقال لـ <strong>تداول الرئيسي</strong> أو الاستحواذ. بناء منظومة حوكمة مؤسسية تستوفي متطلبات هيئة السوق المالية (CMA).</p>
+                                    <div class="growth-kpi-list">
+                                        <div class="growth-kpi-item"><i class="fa-solid fa-check-circle"></i><span>استيفاء 100% من متطلبات CMA للإدراج في سوق نمو خلال 18-24 شهراً.</span></div>
+                                        <div class="growth-kpi-item"><i class="fa-solid fa-check-circle"></i><span>مضاعفة التقييم الاستثماري (Enterprise Value) بنسبة 1.5x-2x بحلول الإدراج.</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="alert-box info">
+                            <i class="fa-solid fa-info-circle"></i>
+                            <p><strong>مسار الإدراج:</strong> نمو → الموازي → تداول الرئيسي أو الاستحواذ. يتطلب هذا المسار إعداد القوائم المالية المدققة وبناء منظومة حوكمة مؤسسية كاملة (Board, Audit Committee, Disclosure) قبل 12 شهراً من موعد التقديم.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ======================================
+                 6. KPIs & CHARTS
+                 ====================================== -->
+            <section id="section-kpis" class="dashboard-section">
+
+                <div class="grid-2col">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="icon-header"><i class="fa-solid fa-chart-column"></i></div>
+                            <h3>المستهدف الشهري الإجمالي (100 مهمة)</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="chart-wrapper">
+                                <canvas id="monthlyTargetsChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="icon-header"><i class="fa-solid fa-chart-line"></i></div>
+                            <h3>التراكم السنوي المستهدف خلال 12 شهراً</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="chart-wrapper">
+                                <canvas id="cumulativeTargetsChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="icon-header"><i class="fa-solid fa-table-list"></i></div>
+                        <h3>جدول توزيع الأهداف شهرياً عبر القنوات الخمسة</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="kpi-monthly-table">
+                                <thead>
+                                    <tr>
+                                        <th>الشهر</th>
+                                        <th>تجزئة وفروع</th>
+                                        <th>بيع عريض MT</th>
+                                        <th>مبيعات B2B</th>
+                                        <th>التوسع الجغرافي</th>
+                                        <th>خطوات التعاقد</th>
+                                        <th class="total-td">المجموع</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>الشهر 1</td><td>1</td><td>1</td><td>1</td><td>0</td><td>1</td><td class="total-td">4</td></tr>
+                                    <tr><td>الشهر 2</td><td>1</td><td>1</td><td>1</td><td>1</td><td>2</td><td class="total-td">6</td></tr>
+                                    <tr><td>الشهر 3</td><td>1</td><td>1</td><td>1</td><td>1</td><td>2</td><td class="total-td">6</td></tr>
+                                    <tr><td>الشهر 4</td><td>2</td><td>2</td><td>2</td><td>1</td><td>3</td><td class="total-td">10</td></tr>
+                                    <tr><td>الشهر 5</td><td>2</td><td>2</td><td>2</td><td>1</td><td>3</td><td class="total-td">10</td></tr>
+                                    <tr><td>الشهر 6</td><td>2</td><td>2</td><td>2</td><td>1</td><td>3</td><td class="total-td">10</td></tr>
+                                    <tr><td>الشهر 7</td><td>2</td><td>2</td><td>2</td><td>1</td><td>3</td><td class="total-td">10</td></tr>
+                                    <tr><td>الشهر 8</td><td>2</td><td>2</td><td>2</td><td>1</td><td>3</td><td class="total-td">10</td></tr>
+                                    <tr><td>الشهر 9</td><td>2</td><td>2</td><td>2</td><td>1</td><td>3</td><td class="total-td">10</td></tr>
+                                    <tr><td>الشهر 10</td><td>2</td><td>2</td><td>2</td><td>1</td><td>3</td><td class="total-td">10</td></tr>
+                                    <tr><td>الشهر 11</td><td>2</td><td>2</td><td>2</td><td>1</td><td>3</td><td class="total-td">10</td></tr>
+                                    <tr><td>الشهر 12</td><td>1</td><td>1</td><td>1</td><td>0</td><td>1</td><td class="total-td">4</td></tr>
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <td>الإجمالي السنوي</td>
+                                        <td>20 هدفاً</td>
+                                        <td>20 هدفاً</td>
+                                        <td>20 هدفاً</td>
+                                        <td>10 أهداف</td>
+                                        <td>30 هدفاً</td>
+                                        <td class="grand-total-td">100 هدف</td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- ======================================
+                 7. AXIS 5 — CONSULTANT AGREEMENT
+                 ====================================== -->
+            <section id="section-consultant" class="dashboard-section">
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="icon-header"><i class="fa-solid fa-handshake"></i></div>
+                        <h3>المحور الخامس: هيكلية الاتفاق المالي والمهني (Hybrid Compensation Model)</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="section-intro">لتحديد الآلية العملية والمنصفة بين المستشار ومالك المصنع، يتم تقسيم الأتعاب إلى <strong>نموذج هجين (Hybrid Compensation)</strong> يحمي سيولة المصنع ويضمن أعلى درجات الالتزام لتحقيق النتائج المالية الفعلية.</p>
+
+                        <div class="consultant-model-grid">
+                            <div class="consultant-model-card">
+                                <div class="model-num">01</div>
+                                <h4>الأجر الثابت (Part-Time Retainer)</h4>
+                                <p class="model-mechanism">مبلغ شهري مقطوع مقابل ساعات عمل استشارية أسبوعية لبناء النظم، متابعة الشهادات والاعتمادات، وإدارة مسؤولي القنوات الخمسة ومتابعة مؤشرات أدائهم.</p>
+                                <div class="model-value-tag">
+                                    <i class="fa-solid fa-shield-check" style="margin-left:6px"></i>
+                                    يضمن وجود خبير يقود العمليات الاستراتيجية والملفات التأسيسية بتكلفة ثابتة ومحددة مسبقاً.
+                                </div>
+                            </div>
+                            <div class="consultant-model-card">
+                                <div class="model-num">02</div>
+                                <h4>عمولة الإنجاز (Success Percentage)</h4>
+                                <p class="model-mechanism">نسبة مئوية تُحسب وتُدفع بناءً على: عقود B2B المبرمة، أرباح قناة الكاش فان، وعقود الشراكات الاستثمارية. لا يدفع المالك النسبة إلا من الأرباح الإضافية الفعلية.</p>
+                                <div class="model-value-tag">
+                                    <i class="fa-solid fa-link" style="margin-left:6px"></i>
+                                    ربط أتعاب المستشار الكبرى بالنتائج المالية الحقيقية — تحالف مصالح مضمون بين الطرفين.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Consultant KPIs -->
+                        <div class="section-label">
+                            <h3>مؤشرات قياس أداء المستشار</h3>
+                            <span>Consultant KPIs Evaluation</span>
+                        </div>
+                        <div class="consultant-kpi-row">
+                            <div class="consultant-kpi-card">
+                                <div class="kpi-pct">90%</div>
+                                <h5>معدل إنجاز خطة التطوير</h5>
+                                <p>Strategy Execution Rate — الالتزام بتنفيذ 90% من المخرجات المحددة في الجدول الزمني لكل محور من المحاور الخمسة.</p>
+                            </div>
+                            <div class="consultant-kpi-card">
+                                <div class="kpi-pct">85%</div>
+                                <h5>معدل تحقيق أهداف الإيرادات</h5>
+                                <p>Revenue Target Attainment — تحقيق 85% على الأقل من إجمالي أهداف المبيعات لقنوات B2B والكاش فان.</p>
+                            </div>
+                            <div class="consultant-kpi-card">
+                                <div class="kpi-pct">60</div>
+                                <h5>كفاءة إدارة مسؤولي القنوات</h5>
+                                <p>Team Management Efficiency — توظيف وتشغيل مدراء القنوات الخمسة وتفعيل مؤشرات أدائهم خلال أول 60 يوماً من العقد.</p>
+                            </div>
+                        </div>
+
+                        <div class="alert-box warning mt-4">
+                            <i class="fa-solid fa-triangle-exclamation"></i>
+                            <p><strong>شرط الصرف:</strong> تُدفع عمولة الإنجاز فور التحقق الموثق لكل هدف عبر تقارير مالية رسمية — أي تأخير في التسليم المالي يوقف احتساب العمولة حتى التسوية.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+        </div><!-- /sections-container -->
+    </main><!-- /main-content -->
+</div><!-- /app-container -->
+
+<script src="ASSETS/JS/app.js"></script>
 </body>
 </html>
